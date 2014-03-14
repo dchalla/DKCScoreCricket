@@ -1,0 +1,882 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B08302A176A3D4900D85392 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B083029176A3D4900D85392 /* CoreImage.framework */; };
+		1B09176817BE846700F8AC2A /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B09175E17BE846700F8AC2A /* Icon-72.png */; };
+		1B09176917BE846700F8AC2A /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B09175F17BE846700F8AC2A /* Icon-72@2x.png */; };
+		1B09176A17BE846700F8AC2A /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B09176017BE846700F8AC2A /* Icon-Small-50.png */; };
+		1B09176B17BE846700F8AC2A /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B09176117BE846700F8AC2A /* Icon-Small-50@2x.png */; };
+		1B09176C17BE846700F8AC2A /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B09176217BE846700F8AC2A /* Icon-Small.png */; };
+		1B09176D17BE846700F8AC2A /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B09176317BE846700F8AC2A /* Icon-Small@2x.png */; };
+		1B09176E17BE846700F8AC2A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B09176417BE846700F8AC2A /* Icon.png */; };
+		1B09176F17BE846700F8AC2A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B09176517BE846700F8AC2A /* Icon@2x.png */; };
+		1B09177017BE846700F8AC2A /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B09176617BE846700F8AC2A /* iTunesArtwork.png */; };
+		1B09177117BE846700F8AC2A /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B09176717BE846700F8AC2A /* iTunesArtwork@2x.png */; };
+		1B7B02B917BE877400AE8F87 /* DKCReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF775517874B1B00336878 /* DKCReachability.m */; };
+		1B7B02BC17BE8A6000AE8F87 /* UIImage+StackBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B7B02BB17BE8A6000AE8F87 /* UIImage+StackBlur.m */; };
+		1B7B02F617C68C8300AE8F87 /* Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B7B02F517C68C8300AE8F87 /* Ball.png */; };
+		1BACAC4517EA5B9000C61896 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BACAC4217EA5B9000C61896 /* Default-568h@2x.png */; };
+		1BACAC4617EA5B9000C61896 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BACAC4317EA5B9000C61896 /* Default.png */; };
+		1BACAC4717EA5B9000C61896 /* Default~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BACAC4417EA5B9000C61896 /* Default~iphone.png */; };
+		1BC7366C173AF7D200AB3941 /* hands.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC7366B173AF7D200AB3941 /* hands.png */; };
+		1BC7367F173C1DD000AB3941 /* handsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC7367D173C1DD000AB3941 /* handsButton.png */; };
+		1BC73680173C1DD000AB3941 /* handsButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC7367E173C1DD000AB3941 /* handsButton@2x.png */; };
+		1BEF77451787205300336878 /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF77431787205300336878 /* Appirater.m */; };
+		1BEF77471787228200336878 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEF77461787228200336878 /* StoreKit.framework */; };
+		1BEF77491787232100336878 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEF77481787232100336878 /* SystemConfiguration.framework */; };
+		1BEF77531787496200336878 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BEF77521787496200336878 /* Reachability.m */; };
+		1BF1171117DA6F65004D7067 /* DKCMatchesListCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1171017DA6F65004D7067 /* DKCMatchesListCollectionViewController.m */; };
+		1BF1171417DA7105004D7067 /* DKCMatchesListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1171317DA7105004D7067 /* DKCMatchesListCollectionViewCell.m */; };
+		1BF1171717DA81EE004D7067 /* DKCDynamicCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF1171617DA81EE004D7067 /* DKCDynamicCollectionViewFlowLayout.m */; };
+		EE4C22C317C2FDFC007D6DE5 /* blurredBackgroundCreateMatch.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4C22C217C2FDFC007D6DE5 /* blurredBackgroundCreateMatch.png */; };
+		EE4D77851592EDBC009929A4 /* helpPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = EE4D77841592EDBB009929A4 /* helpPhoto.png */; };
+		EE4F80C51730AB0700F08178 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4F80C41730AB0700F08178 /* CFNetwork.framework */; };
+		EE4F80C71730AB1300F08178 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4F80C61730AB1300F08178 /* AudioToolbox.framework */; };
+		EE4F80C91730AB2500F08178 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4F80C81730AB2500F08178 /* CoreLocation.framework */; };
+		EE82255F15856EE300D84530 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE82255E15856EE300D84530 /* MessageUI.framework */; };
+		EE8225631585830A00D84530 /* DKCScoreCardHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE8225621585830A00D84530 /* DKCScoreCardHeaderView.m */; };
+		EE8225651586D99800D84530 /* GreenGradientBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = EE8225641586D99800D84530 /* GreenGradientBackground.png */; };
+		EE8225671586E38600D84530 /* blue_background.png in Resources */ = {isa = PBXBuildFile; fileRef = EE8225661586E38500D84530 /* blue_background.png */; };
+		EE8225691586EAF300D84530 /* ScoreCricketOpeningDarkBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = EE8225681586EAF300D84530 /* ScoreCricketOpeningDarkBlue.png */; };
+		EE82256C15882E9600D84530 /* DKCCreatePList.m in Sources */ = {isa = PBXBuildFile; fileRef = EE82256B15882E9600D84530 /* DKCCreatePList.m */; };
+		EE82257015898FD200D84530 /* DKCListOfMatchesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE82256F15898FD200D84530 /* DKCListOfMatchesViewController.m */; };
+		EE822573158AE44D00D84530 /* DKCListOfMatchesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE822572158AE44D00D84530 /* DKCListOfMatchesCell.m */; };
+		EE822576158AEF2700D84530 /* clipViewBottom.png in Resources */ = {isa = PBXBuildFile; fileRef = EE822574158AEF2600D84530 /* clipViewBottom.png */; };
+		EE822577158AEF2700D84530 /* clipViewTop.png in Resources */ = {isa = PBXBuildFile; fileRef = EE822575158AEF2600D84530 /* clipViewTop.png */; };
+		EE822579158AF10D00D84530 /* bluepin.png in Resources */ = {isa = PBXBuildFile; fileRef = EE822578158AF10C00D84530 /* bluepin.png */; };
+		EE842DF315727C24006074DF /* DKCScoreCardBattingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE842DF215727C24006074DF /* DKCScoreCardBattingTableViewCell.m */; };
+		EE842DF715770AD3006074DF /* DKCScoreCordBowlingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE842DF615770AD3006074DF /* DKCScoreCordBowlingTableViewCell.m */; };
+		EE989D0516264E0F004F9B85 /* ScoreCricketOpeningDarkBlue-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = EE989D0416264E0F004F9B85 /* ScoreCricketOpeningDarkBlue-568h.png */; };
+		EE989D0816267C96004F9B85 /* ScoreCricketAppIcon1024x1024.png in Resources */ = {isa = PBXBuildFile; fileRef = EE989D0716267C96004F9B85 /* ScoreCricketAppIcon1024x1024.png */; };
+		EEA204C117333D80003D8350 /* leftHand.png in Resources */ = {isa = PBXBuildFile; fileRef = EEA204BF17333D80003D8350 /* leftHand.png */; };
+		EEA204C217333D80003D8350 /* rightHand.png in Resources */ = {isa = PBXBuildFile; fileRef = EEA204C017333D80003D8350 /* rightHand.png */; };
+		EEC1C51F17C1204E006EE373 /* blurredBackgroundScoring.png in Resources */ = {isa = PBXBuildFile; fileRef = EEC1C51E17C1204E006EE373 /* blurredBackgroundScoring.png */; };
+		EED9013B1563689300896F18 /* NSDictionary+MutableDeepCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = EED9013A1563689300896F18 /* NSDictionary+MutableDeepCopy.m */; };
+		EED901431565F15800896F18 /* DKCScoreCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EED901421565F15800896F18 /* DKCScoreCardViewController.m */; };
+		EEDCC228151EBD2700A9952C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDCC227151EBD2700A9952C /* UIKit.framework */; };
+		EEDCC22A151EBD2700A9952C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDCC229151EBD2700A9952C /* Foundation.framework */; };
+		EEDCC22C151EBD2700A9952C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDCC22B151EBD2700A9952C /* CoreGraphics.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		EEDCC232151EBD2700A9952C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEDCC230151EBD2700A9952C /* InfoPlist.strings */; };
+		EEDCC234151EBD2700A9952C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCC233151EBD2700A9952C /* main.m */; };
+		EEDCC238151EBD2700A9952C /* DKCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCC237151EBD2700A9952C /* DKCAppDelegate.m */; };
+		EEDCC241151EBD2700A9952C /* DKCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCC240151EBD2700A9952C /* DKCViewController.m */; };
+		EEDCC270151F007B00A9952C /* DKCMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCC26F151F007B00A9952C /* DKCMainMenuViewController.m */; };
+		EEDCC279151F0F8600A9952C /* UIView+UIView_RoundCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCC278151F0F8600A9952C /* UIView+UIView_RoundCorner.m */; };
+		EEDCC29F1522A43E00A9952C /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEDCC29E1522A43E00A9952C /* MainStoryboard_iPhone.storyboard */; };
+		EEDCC2A81522A5E700A9952C /* Ball.JPG in Resources */ = {isa = PBXBuildFile; fileRef = EEDCC2A11522A5E700A9952C /* Ball.JPG */; };
+		EEDCC2AA1522A5E700A9952C /* BottomCurve.png in Resources */ = {isa = PBXBuildFile; fileRef = EEDCC2A21522A5E700A9952C /* BottomCurve.png */; };
+		EEDCC2AC1522A5E700A9952C /* greenBackground.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EEDCC2A31522A5E700A9952C /* greenBackground.jpg */; };
+		EEDCC2AE1522A5E700A9952C /* ScoreCricketOpening.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EEDCC2A41522A5E700A9952C /* ScoreCricketOpening.jpg */; };
+		EEDCC2B01522A5E700A9952C /* ScoreCricketOpeningDark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EEDCC2A51522A5E700A9952C /* ScoreCricketOpeningDark.jpg */; };
+		EEDCC2B21522A5E700A9952C /* ScoreCricketOpeningDarkGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = EEDCC2A61522A5E700A9952C /* ScoreCricketOpeningDarkGreen.png */; };
+		EEDCC2B41522A5E700A9952C /* TopCurve.png in Resources */ = {isa = PBXBuildFile; fileRef = EEDCC2A71522A5E700A9952C /* TopCurve.png */; };
+		EEDCC2B71522A6FC00A9952C /* CricketBat.png in Resources */ = {isa = PBXBuildFile; fileRef = EEDCC2B61522A6FC00A9952C /* CricketBat.png */; };
+		EEDCC2BC1522D9EB00A9952C /* DKCCreateMatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCC2BB1522D9EB00A9952C /* DKCCreateMatchViewController.m */; };
+		EEDCC2C61525514F00A9952C /* Team1 in Resources */ = {isa = PBXBuildFile; fileRef = EEDCC2C41525514E00A9952C /* Team1 */; };
+		EEDCC2C81525514F00A9952C /* Team2 in Resources */ = {isa = PBXBuildFile; fileRef = EEDCC2C51525514F00A9952C /* Team2 */; };
+		EEDCC2CD15279A7500A9952C /* DKCEditTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCC2CC15279A7500A9952C /* DKCEditTeamViewController.m */; };
+		EEDCC2D01527ABDC00A9952C /* greenBackgroundSmall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EEDCC2CF1527ABDC00A9952C /* greenBackgroundSmall.jpg */; };
+		EEDCC2D41527B2CD00A9952C /* DKCEditTeamCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCC2D31527B2CD00A9952C /* DKCEditTeamCell.m */; };
+		EEDCC2DD1528F47700A9952C /* DKCScoringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCC2DC1528F47700A9952C /* DKCScoringViewController.m */; };
+		EEDCC2E51529155700A9952C /* UIButton+GradientColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDCC2E41529155700A9952C /* UIButton+GradientColor.m */; };
+		EEDCC2E815291B6F00A9952C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDCC2E715291B6F00A9952C /* QuartzCore.framework */; };
+		EEDE84BF15521C41005BD509 /* DKCOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDE84BE15521C41005BD509 /* DKCOutViewController.m */; };
+		EEDE84C2155599C8005BD509 /* DKCSelectBatsmanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDE84C1155599C7005BD509 /* DKCSelectBatsmanViewController.m */; };
+		EEFC2FCB153E4D28000E835A /* DKCSelectBowlerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFC2FCA153E4D28000E835A /* DKCSelectBowlerViewController.m */; };
+		EEFC2FCF1540F660000E835A /* DKCAdditionalRunsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFC2FCE1540F65F000E835A /* DKCAdditionalRunsViewController.m */; };
+		F961552818A89FD2008FE4A9 /* Changelog.txt in Resources */ = {isa = PBXBuildFile; fileRef = F96154B218A89FD2008FE4A9 /* Changelog.txt */; };
+		F961554718A89FD2008FE4A9 /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = F96154E418A89FD2008FE4A9 /* Readme.txt */; };
+		F961554818A89FD2008FE4A9 /* Changelog.txt in Resources */ = {isa = PBXBuildFile; fileRef = F96154E618A89FD2008FE4A9 /* Changelog.txt */; };
+		F961557218A89FD2008FE4A9 /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = F961552518A89FD2008FE4A9 /* Readme.txt */; };
+		F961557318A89FD2008FE4A9 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F961552618A89FD2008FE4A9 /* libGoogleAnalyticsServices.a */; };
+		F961557418A89FD2008FE4A9 /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = F961552718A89FD2008FE4A9 /* Readme.txt */; };
+		F961557C18A8A01F008FE4A9 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F961557B18A8A01F008FE4A9 /* AdSupport.framework */; };
+		F961557E18A8A02D008FE4A9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F961557D18A8A02D008FE4A9 /* CoreData.framework */; };
+		F961558018A8A045008FE4A9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F961557F18A8A045008FE4A9 /* libz.dylib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1B083029176A3D4900D85392 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		1B09175E17BE846700F8AC2A /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		1B09175F17BE846700F8AC2A /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		1B09176017BE846700F8AC2A /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		1B09176117BE846700F8AC2A /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		1B09176217BE846700F8AC2A /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		1B09176317BE846700F8AC2A /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		1B09176417BE846700F8AC2A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		1B09176517BE846700F8AC2A /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		1B09176617BE846700F8AC2A /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		1B09176717BE846700F8AC2A /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		1B7B02BA17BE8A6000AE8F87 /* UIImage+StackBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+StackBlur.h"; path = "Infrastructure/UIImage+StackBlur.h"; sourceTree = "<group>"; };
+		1B7B02BB17BE8A6000AE8F87 /* UIImage+StackBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+StackBlur.m"; path = "Infrastructure/UIImage+StackBlur.m"; sourceTree = "<group>"; };
+		1B7B02F517C68C8300AE8F87 /* Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ball.png; path = Resources/Images/Ball.png; sourceTree = "<group>"; };
+		1BACAC4217EA5B9000C61896 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1BACAC4317EA5B9000C61896 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1BACAC4417EA5B9000C61896 /* Default~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default~iphone.png"; sourceTree = "<group>"; };
+		1BC7366B173AF7D200AB3941 /* hands.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hands.png; sourceTree = "<group>"; };
+		1BC7367D173C1DD000AB3941 /* handsButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = handsButton.png; sourceTree = "<group>"; };
+		1BC7367E173C1DD000AB3941 /* handsButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "handsButton@2x.png"; sourceTree = "<group>"; };
+		1BEF77421787205300336878 /* Appirater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Appirater.h; path = Appirater/Appirater.h; sourceTree = "<group>"; };
+		1BEF77431787205300336878 /* Appirater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Appirater.m; path = Appirater/Appirater.m; sourceTree = "<group>"; };
+		1BEF77441787205300336878 /* AppiraterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppiraterDelegate.h; path = Appirater/AppiraterDelegate.h; sourceTree = "<group>"; };
+		1BEF77461787228200336878 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		1BEF77481787232100336878 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1BEF77511787496100336878 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Infrastructure/Reachability.h; sourceTree = "<group>"; };
+		1BEF77521787496200336878 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Infrastructure/Reachability.m; sourceTree = "<group>"; };
+		1BEF775417874B1B00336878 /* DKCReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCReachability.h; path = Infrastructure/DKCReachability.h; sourceTree = "<group>"; };
+		1BEF775517874B1B00336878 /* DKCReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCReachability.m; path = Infrastructure/DKCReachability.m; sourceTree = "<group>"; };
+		1BF1170F17DA6F65004D7067 /* DKCMatchesListCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCMatchesListCollectionViewController.h; path = ListOfMatches/DKCMatchesListCollectionViewController.h; sourceTree = "<group>"; };
+		1BF1171017DA6F65004D7067 /* DKCMatchesListCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCMatchesListCollectionViewController.m; path = ListOfMatches/DKCMatchesListCollectionViewController.m; sourceTree = "<group>"; };
+		1BF1171217DA7105004D7067 /* DKCMatchesListCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCMatchesListCollectionViewCell.h; path = ListOfMatches/DKCMatchesListCollectionViewCell.h; sourceTree = "<group>"; };
+		1BF1171317DA7105004D7067 /* DKCMatchesListCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCMatchesListCollectionViewCell.m; path = ListOfMatches/DKCMatchesListCollectionViewCell.m; sourceTree = "<group>"; };
+		1BF1171517DA81EE004D7067 /* DKCDynamicCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCDynamicCollectionViewFlowLayout.h; path = ListOfMatches/DKCDynamicCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		1BF1171617DA81EE004D7067 /* DKCDynamicCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCDynamicCollectionViewFlowLayout.m; path = ListOfMatches/DKCDynamicCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		EE4C22C217C2FDFC007D6DE5 /* blurredBackgroundCreateMatch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blurredBackgroundCreateMatch.png; path = Resources/Images/blurredBackgroundCreateMatch.png; sourceTree = "<group>"; };
+		EE4D77841592EDBB009929A4 /* helpPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helpPhoto.png; sourceTree = "<group>"; };
+		EE4F80C41730AB0700F08178 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EE4F80C61730AB1300F08178 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		EE4F80C81730AB2500F08178 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		EE82255E15856EE300D84530 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		EE8225611585830A00D84530 /* DKCScoreCardHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKCScoreCardHeaderView.h; sourceTree = "<group>"; };
+		EE8225621585830A00D84530 /* DKCScoreCardHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKCScoreCardHeaderView.m; sourceTree = "<group>"; };
+		EE8225641586D99800D84530 /* GreenGradientBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenGradientBackground.png; sourceTree = "<group>"; };
+		EE8225661586E38500D84530 /* blue_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_background.png; sourceTree = "<group>"; };
+		EE8225681586EAF300D84530 /* ScoreCricketOpeningDarkBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScoreCricketOpeningDarkBlue.png; sourceTree = "<group>"; };
+		EE82256A15882E9600D84530 /* DKCCreatePList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCCreatePList.h; path = Infrastructure/DKCCreatePList.h; sourceTree = "<group>"; };
+		EE82256B15882E9600D84530 /* DKCCreatePList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCCreatePList.m; path = Infrastructure/DKCCreatePList.m; sourceTree = "<group>"; };
+		EE82256E15898FD200D84530 /* DKCListOfMatchesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCListOfMatchesViewController.h; path = ListOfMatches/DKCListOfMatchesViewController.h; sourceTree = "<group>"; };
+		EE82256F15898FD200D84530 /* DKCListOfMatchesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCListOfMatchesViewController.m; path = ListOfMatches/DKCListOfMatchesViewController.m; sourceTree = "<group>"; };
+		EE822571158AE44D00D84530 /* DKCListOfMatchesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCListOfMatchesCell.h; path = ListOfMatches/DKCListOfMatchesCell.h; sourceTree = "<group>"; };
+		EE822572158AE44D00D84530 /* DKCListOfMatchesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCListOfMatchesCell.m; path = ListOfMatches/DKCListOfMatchesCell.m; sourceTree = "<group>"; };
+		EE822574158AEF2600D84530 /* clipViewBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clipViewBottom.png; sourceTree = "<group>"; };
+		EE822575158AEF2600D84530 /* clipViewTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clipViewTop.png; sourceTree = "<group>"; };
+		EE822578158AF10C00D84530 /* bluepin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluepin.png; sourceTree = "<group>"; };
+		EE842DF115727C24006074DF /* DKCScoreCardBattingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCScoreCardBattingTableViewCell.h; path = ScoreCard/DKCScoreCardBattingTableViewCell.h; sourceTree = "<group>"; };
+		EE842DF215727C24006074DF /* DKCScoreCardBattingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCScoreCardBattingTableViewCell.m; path = ScoreCard/DKCScoreCardBattingTableViewCell.m; sourceTree = "<group>"; };
+		EE842DF515770AD3006074DF /* DKCScoreCordBowlingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCScoreCordBowlingTableViewCell.h; path = ScoreCard/DKCScoreCordBowlingTableViewCell.h; sourceTree = "<group>"; };
+		EE842DF615770AD3006074DF /* DKCScoreCordBowlingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCScoreCordBowlingTableViewCell.m; path = ScoreCard/DKCScoreCordBowlingTableViewCell.m; sourceTree = "<group>"; };
+		EE989D0416264E0F004F9B85 /* ScoreCricketOpeningDarkBlue-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ScoreCricketOpeningDarkBlue-568h.png"; sourceTree = "<group>"; };
+		EE989D0716267C96004F9B85 /* ScoreCricketAppIcon1024x1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScoreCricketAppIcon1024x1024.png; sourceTree = "<group>"; };
+		EEA204BF17333D80003D8350 /* leftHand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = leftHand.png; path = Resources/Images/leftHand.png; sourceTree = "<group>"; };
+		EEA204C017333D80003D8350 /* rightHand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rightHand.png; path = Resources/Images/rightHand.png; sourceTree = "<group>"; };
+		EEC1C51E17C1204E006EE373 /* blurredBackgroundScoring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blurredBackgroundScoring.png; path = Resources/Images/blurredBackgroundScoring.png; sourceTree = "<group>"; };
+		EED901391563689300896F18 /* NSDictionary+MutableDeepCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+MutableDeepCopy.h"; path = "Infrastructure/NSDictionary+MutableDeepCopy.h"; sourceTree = "<group>"; };
+		EED9013A1563689300896F18 /* NSDictionary+MutableDeepCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+MutableDeepCopy.m"; path = "Infrastructure/NSDictionary+MutableDeepCopy.m"; sourceTree = "<group>"; };
+		EED901411565F15800896F18 /* DKCScoreCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCScoreCardViewController.h; path = ScoreCard/DKCScoreCardViewController.h; sourceTree = "<group>"; };
+		EED901421565F15800896F18 /* DKCScoreCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCScoreCardViewController.m; path = ScoreCard/DKCScoreCardViewController.m; sourceTree = "<group>"; };
+		EEDCC223151EBD2700A9952C /* Score Cricket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Score Cricket.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEDCC227151EBD2700A9952C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EEDCC229151EBD2700A9952C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EEDCC22B151EBD2700A9952C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EEDCC22F151EBD2700A9952C /* Score Cricket-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Score Cricket-Info.plist"; sourceTree = "<group>"; };
+		EEDCC231151EBD2700A9952C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EEDCC233151EBD2700A9952C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EEDCC235151EBD2700A9952C /* Score Cricket-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Score Cricket-Prefix.pch"; sourceTree = "<group>"; };
+		EEDCC236151EBD2700A9952C /* DKCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKCAppDelegate.h; sourceTree = "<group>"; };
+		EEDCC237151EBD2700A9952C /* DKCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKCAppDelegate.m; sourceTree = "<group>"; };
+		EEDCC23F151EBD2700A9952C /* DKCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DKCViewController.h; sourceTree = "<group>"; };
+		EEDCC240151EBD2700A9952C /* DKCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DKCViewController.m; sourceTree = "<group>"; };
+		EEDCC248151EBD2800A9952C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		EEDCC250151EBD2800A9952C /* Score CricketTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Score CricketTests-Info.plist"; sourceTree = "<group>"; };
+		EEDCC252151EBD2800A9952C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EEDCC254151EBD2800A9952C /* Score_CricketTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Score_CricketTests.h; sourceTree = "<group>"; };
+		EEDCC255151EBD2800A9952C /* Score_CricketTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Score_CricketTests.m; sourceTree = "<group>"; };
+		EEDCC26E151F007B00A9952C /* DKCMainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCMainMenuViewController.h; path = MainMenuScreen/DKCMainMenuViewController.h; sourceTree = "<group>"; };
+		EEDCC26F151F007B00A9952C /* DKCMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCMainMenuViewController.m; path = MainMenuScreen/DKCMainMenuViewController.m; sourceTree = "<group>"; };
+		EEDCC277151F0F8600A9952C /* UIView+UIView_RoundCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+UIView_RoundCorner.h"; path = "Infrastructure/UIView+UIView_RoundCorner.h"; sourceTree = "<group>"; };
+		EEDCC278151F0F8600A9952C /* UIView+UIView_RoundCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+UIView_RoundCorner.m"; path = "Infrastructure/UIView+UIView_RoundCorner.m"; sourceTree = "<group>"; };
+		EEDCC29E1522A43E00A9952C /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		EEDCC2A11522A5E700A9952C /* Ball.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Ball.JPG; path = Resources/Images/Ball.JPG; sourceTree = "<group>"; };
+		EEDCC2A21522A5E700A9952C /* BottomCurve.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BottomCurve.png; path = Resources/Images/BottomCurve.png; sourceTree = "<group>"; };
+		EEDCC2A31522A5E700A9952C /* greenBackground.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = greenBackground.jpg; path = Resources/Images/greenBackground.jpg; sourceTree = "<group>"; };
+		EEDCC2A41522A5E700A9952C /* ScoreCricketOpening.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ScoreCricketOpening.jpg; path = Resources/Images/ScoreCricketOpening.jpg; sourceTree = "<group>"; };
+		EEDCC2A51522A5E700A9952C /* ScoreCricketOpeningDark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ScoreCricketOpeningDark.jpg; path = Resources/Images/ScoreCricketOpeningDark.jpg; sourceTree = "<group>"; };
+		EEDCC2A61522A5E700A9952C /* ScoreCricketOpeningDarkGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ScoreCricketOpeningDarkGreen.png; path = Resources/Images/ScoreCricketOpeningDarkGreen.png; sourceTree = "<group>"; };
+		EEDCC2A71522A5E700A9952C /* TopCurve.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TopCurve.png; path = Resources/Images/TopCurve.png; sourceTree = "<group>"; };
+		EEDCC2B61522A6FC00A9952C /* CricketBat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CricketBat.png; sourceTree = "<group>"; };
+		EEDCC2BA1522D9EB00A9952C /* DKCCreateMatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCCreateMatchViewController.h; path = CreateMatch/DKCCreateMatchViewController.h; sourceTree = "<group>"; };
+		EEDCC2BB1522D9EB00A9952C /* DKCCreateMatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCCreateMatchViewController.m; path = CreateMatch/DKCCreateMatchViewController.m; sourceTree = "<group>"; };
+		EEDCC2C41525514E00A9952C /* Team1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Team1; sourceTree = "<group>"; };
+		EEDCC2C51525514F00A9952C /* Team2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Team2; sourceTree = "<group>"; };
+		EEDCC2CB15279A7500A9952C /* DKCEditTeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCEditTeamViewController.h; path = CommonClasses/DKCEditTeamViewController.h; sourceTree = "<group>"; };
+		EEDCC2CC15279A7500A9952C /* DKCEditTeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCEditTeamViewController.m; path = CommonClasses/DKCEditTeamViewController.m; sourceTree = "<group>"; };
+		EEDCC2CF1527ABDC00A9952C /* greenBackgroundSmall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = greenBackgroundSmall.jpg; sourceTree = "<group>"; };
+		EEDCC2D21527B2CD00A9952C /* DKCEditTeamCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCEditTeamCell.h; path = CommonClasses/DKCEditTeamCell.h; sourceTree = "<group>"; };
+		EEDCC2D31527B2CD00A9952C /* DKCEditTeamCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCEditTeamCell.m; path = CommonClasses/DKCEditTeamCell.m; sourceTree = "<group>"; };
+		EEDCC2DB1528F47700A9952C /* DKCScoringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCScoringViewController.h; path = Scoring/DKCScoringViewController.h; sourceTree = "<group>"; };
+		EEDCC2DC1528F47700A9952C /* DKCScoringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCScoringViewController.m; path = Scoring/DKCScoringViewController.m; sourceTree = "<group>"; };
+		EEDCC2E31529155700A9952C /* UIButton+GradientColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIButton+GradientColor.h"; path = "Infrastructure/UIButton+GradientColor.h"; sourceTree = "<group>"; };
+		EEDCC2E41529155700A9952C /* UIButton+GradientColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIButton+GradientColor.m"; path = "Infrastructure/UIButton+GradientColor.m"; sourceTree = "<group>"; };
+		EEDCC2E715291B6F00A9952C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EEDE84BD15521C41005BD509 /* DKCOutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCOutViewController.h; path = Scoring/DKCOutViewController.h; sourceTree = "<group>"; };
+		EEDE84BE15521C41005BD509 /* DKCOutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCOutViewController.m; path = Scoring/DKCOutViewController.m; sourceTree = "<group>"; };
+		EEDE84C0155599C7005BD509 /* DKCSelectBatsmanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCSelectBatsmanViewController.h; path = Scoring/DKCSelectBatsmanViewController.h; sourceTree = "<group>"; };
+		EEDE84C1155599C7005BD509 /* DKCSelectBatsmanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCSelectBatsmanViewController.m; path = Scoring/DKCSelectBatsmanViewController.m; sourceTree = "<group>"; };
+		EEFC2FC9153E4D28000E835A /* DKCSelectBowlerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCSelectBowlerViewController.h; path = Scoring/DKCSelectBowlerViewController.h; sourceTree = "<group>"; };
+		EEFC2FCA153E4D28000E835A /* DKCSelectBowlerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCSelectBowlerViewController.m; path = Scoring/DKCSelectBowlerViewController.m; sourceTree = "<group>"; };
+		EEFC2FCD1540F65F000E835A /* DKCAdditionalRunsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCAdditionalRunsViewController.h; path = Scoring/DKCAdditionalRunsViewController.h; sourceTree = "<group>"; };
+		EEFC2FCE1540F65F000E835A /* DKCAdditionalRunsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCAdditionalRunsViewController.m; path = Scoring/DKCAdditionalRunsViewController.m; sourceTree = "<group>"; };
+		F96154B218A89FD2008FE4A9 /* Changelog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Changelog.txt; sourceTree = "<group>"; };
+		F96154DE18A89FD2008FE4A9 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		F96154DF18A89FD2008FE4A9 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		F96154E018A89FD2008FE4A9 /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		F96154E118A89FD2008FE4A9 /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		F96154E218A89FD2008FE4A9 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		F96154E318A89FD2008FE4A9 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		F96154E418A89FD2008FE4A9 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		F96154E618A89FD2008FE4A9 /* Changelog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Changelog.txt; sourceTree = "<group>"; };
+		F961552018A89FD2008FE4A9 /* TAGContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGContainer.h; sourceTree = "<group>"; };
+		F961552118A89FD2008FE4A9 /* TAGContainerOpener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGContainerOpener.h; sourceTree = "<group>"; };
+		F961552218A89FD2008FE4A9 /* TAGDataLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGDataLayer.h; sourceTree = "<group>"; };
+		F961552318A89FD2008FE4A9 /* TAGLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGLogger.h; sourceTree = "<group>"; };
+		F961552418A89FD2008FE4A9 /* TAGManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGManager.h; sourceTree = "<group>"; };
+		F961552518A89FD2008FE4A9 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		F961552618A89FD2008FE4A9 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		F961552718A89FD2008FE4A9 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		F961557B18A8A01F008FE4A9 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		F961557D18A8A02D008FE4A9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F961557F18A8A045008FE4A9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EEDCC220151EBD2700A9952C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F961558018A8A045008FE4A9 /* libz.dylib in Frameworks */,
+				1BEF77491787232100336878 /* SystemConfiguration.framework in Frameworks */,
+				F961557E18A8A02D008FE4A9 /* CoreData.framework in Frameworks */,
+				F961557C18A8A01F008FE4A9 /* AdSupport.framework in Frameworks */,
+				1BEF77471787228200336878 /* StoreKit.framework in Frameworks */,
+				1B08302A176A3D4900D85392 /* CoreImage.framework in Frameworks */,
+				EE4F80C91730AB2500F08178 /* CoreLocation.framework in Frameworks */,
+				EE4F80C71730AB1300F08178 /* AudioToolbox.framework in Frameworks */,
+				EE4F80C51730AB0700F08178 /* CFNetwork.framework in Frameworks */,
+				EE82255F15856EE300D84530 /* MessageUI.framework in Frameworks */,
+				EEDCC2E815291B6F00A9952C /* QuartzCore.framework in Frameworks */,
+				EEDCC228151EBD2700A9952C /* UIKit.framework in Frameworks */,
+				EEDCC22A151EBD2700A9952C /* Foundation.framework in Frameworks */,
+				EEDCC22C151EBD2700A9952C /* CoreGraphics.framework in Frameworks */,
+				F961557318A89FD2008FE4A9 /* libGoogleAnalyticsServices.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B09175D17BE844E00F8AC2A /* AppIcon */ = {
+			isa = PBXGroup;
+			children = (
+				1BACAC4217EA5B9000C61896 /* Default-568h@2x.png */,
+				1BACAC4317EA5B9000C61896 /* Default.png */,
+				1BACAC4417EA5B9000C61896 /* Default~iphone.png */,
+				1B09175E17BE846700F8AC2A /* Icon-72.png */,
+				1B09175F17BE846700F8AC2A /* Icon-72@2x.png */,
+				1B09176017BE846700F8AC2A /* Icon-Small-50.png */,
+				1B09176117BE846700F8AC2A /* Icon-Small-50@2x.png */,
+				1B09176217BE846700F8AC2A /* Icon-Small.png */,
+				1B09176317BE846700F8AC2A /* Icon-Small@2x.png */,
+				1B09176417BE846700F8AC2A /* Icon.png */,
+				1B09176517BE846700F8AC2A /* Icon@2x.png */,
+				1B09176617BE846700F8AC2A /* iTunesArtwork.png */,
+				1B09176717BE846700F8AC2A /* iTunesArtwork@2x.png */,
+			);
+			name = AppIcon;
+			sourceTree = "<group>";
+		};
+		1BEF77411787203E00336878 /* Appirater */ = {
+			isa = PBXGroup;
+			children = (
+				1BEF77421787205300336878 /* Appirater.h */,
+				1BEF77431787205300336878 /* Appirater.m */,
+				1BEF77441787205300336878 /* AppiraterDelegate.h */,
+			);
+			name = Appirater;
+			sourceTree = "<group>";
+		};
+		EE82256D15898F7100D84530 /* ListOfMatches */ = {
+			isa = PBXGroup;
+			children = (
+				EE82256E15898FD200D84530 /* DKCListOfMatchesViewController.h */,
+				EE82256F15898FD200D84530 /* DKCListOfMatchesViewController.m */,
+				EE822571158AE44D00D84530 /* DKCListOfMatchesCell.h */,
+				EE822572158AE44D00D84530 /* DKCListOfMatchesCell.m */,
+				1BF1170F17DA6F65004D7067 /* DKCMatchesListCollectionViewController.h */,
+				1BF1171017DA6F65004D7067 /* DKCMatchesListCollectionViewController.m */,
+				1BF1171217DA7105004D7067 /* DKCMatchesListCollectionViewCell.h */,
+				1BF1171317DA7105004D7067 /* DKCMatchesListCollectionViewCell.m */,
+				1BF1171517DA81EE004D7067 /* DKCDynamicCollectionViewFlowLayout.h */,
+				1BF1171617DA81EE004D7067 /* DKCDynamicCollectionViewFlowLayout.m */,
+			);
+			name = ListOfMatches;
+			sourceTree = "<group>";
+		};
+		EED9013D1565EFF100896F18 /* ScoreCard */ = {
+			isa = PBXGroup;
+			children = (
+				EED901411565F15800896F18 /* DKCScoreCardViewController.h */,
+				EED901421565F15800896F18 /* DKCScoreCardViewController.m */,
+				EE842DF115727C24006074DF /* DKCScoreCardBattingTableViewCell.h */,
+				EE842DF215727C24006074DF /* DKCScoreCardBattingTableViewCell.m */,
+				EE842DF515770AD3006074DF /* DKCScoreCordBowlingTableViewCell.h */,
+				EE842DF615770AD3006074DF /* DKCScoreCordBowlingTableViewCell.m */,
+				EE8225611585830A00D84530 /* DKCScoreCardHeaderView.h */,
+				EE8225621585830A00D84530 /* DKCScoreCardHeaderView.m */,
+			);
+			name = ScoreCard;
+			sourceTree = "<group>";
+		};
+		EEDCC218151EBD2700A9952C = {
+			isa = PBXGroup;
+			children = (
+				1BEF77481787232100336878 /* SystemConfiguration.framework */,
+				1BEF77461787228200336878 /* StoreKit.framework */,
+				1B083029176A3D4900D85392 /* CoreImage.framework */,
+				EEDCC22D151EBD2700A9952C /* Score Cricket */,
+				EEDCC24E151EBD2800A9952C /* Score CricketTests */,
+				EEDCC226151EBD2700A9952C /* Frameworks */,
+				EEDCC224151EBD2700A9952C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EEDCC224151EBD2700A9952C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEDCC223151EBD2700A9952C /* Score Cricket.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEDCC226151EBD2700A9952C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F961557F18A8A045008FE4A9 /* libz.dylib */,
+				F961557D18A8A02D008FE4A9 /* CoreData.framework */,
+				F961557B18A8A01F008FE4A9 /* AdSupport.framework */,
+				EE4F80C81730AB2500F08178 /* CoreLocation.framework */,
+				EE4F80C61730AB1300F08178 /* AudioToolbox.framework */,
+				EE4F80C41730AB0700F08178 /* CFNetwork.framework */,
+				EE82255E15856EE300D84530 /* MessageUI.framework */,
+				EEDCC2E715291B6F00A9952C /* QuartzCore.framework */,
+				EEDCC227151EBD2700A9952C /* UIKit.framework */,
+				EEDCC229151EBD2700A9952C /* Foundation.framework */,
+				EEDCC22B151EBD2700A9952C /* CoreGraphics.framework */,
+				EEDCC248151EBD2800A9952C /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EEDCC22D151EBD2700A9952C /* Score Cricket */ = {
+			isa = PBXGroup;
+			children = (
+				F96154B018A89FD2008FE4A9 /* GoogleAnalyticsServicesiOS_3.03a */,
+				1B09175D17BE844E00F8AC2A /* AppIcon */,
+				1BEF77411787203E00336878 /* Appirater */,
+				EE989D0716267C96004F9B85 /* ScoreCricketAppIcon1024x1024.png */,
+				EE82256D15898F7100D84530 /* ListOfMatches */,
+				EED9013D1565EFF100896F18 /* ScoreCard */,
+				EEDCC2DA1528F43600A9952C /* Scoring */,
+				EEDCC2CA1527998900A9952C /* CommonClasses */,
+				EEDCC2B91522D98D00A9952C /* CreateMatch */,
+				EEDCC276151F0F2A00A9952C /* Infrastructure */,
+				EEDCC26A151EFD6D00A9952C /* MainMenuScreen */,
+				EEDCC25F151EC04400A9952C /* Resources */,
+				EEDCC236151EBD2700A9952C /* DKCAppDelegate.h */,
+				EEDCC237151EBD2700A9952C /* DKCAppDelegate.m */,
+				EEDCC29E1522A43E00A9952C /* MainStoryboard_iPhone.storyboard */,
+				EEDCC23F151EBD2700A9952C /* DKCViewController.h */,
+				EEDCC240151EBD2700A9952C /* DKCViewController.m */,
+				EEDCC22E151EBD2700A9952C /* Supporting Files */,
+			);
+			path = "Score Cricket";
+			sourceTree = "<group>";
+		};
+		EEDCC22E151EBD2700A9952C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EEDCC22F151EBD2700A9952C /* Score Cricket-Info.plist */,
+				EEDCC230151EBD2700A9952C /* InfoPlist.strings */,
+				EEDCC233151EBD2700A9952C /* main.m */,
+				EEDCC235151EBD2700A9952C /* Score Cricket-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EEDCC24E151EBD2800A9952C /* Score CricketTests */ = {
+			isa = PBXGroup;
+			children = (
+				EEDCC254151EBD2800A9952C /* Score_CricketTests.h */,
+				EEDCC255151EBD2800A9952C /* Score_CricketTests.m */,
+				EEDCC24F151EBD2800A9952C /* Supporting Files */,
+			);
+			path = "Score CricketTests";
+			sourceTree = "<group>";
+		};
+		EEDCC24F151EBD2800A9952C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EEDCC250151EBD2800A9952C /* Score CricketTests-Info.plist */,
+				EEDCC251151EBD2800A9952C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EEDCC25F151EC04400A9952C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EEDCC260151EC05800A9952C /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EEDCC260151EC05800A9952C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				1B7B02F517C68C8300AE8F87 /* Ball.png */,
+				EE4C22C217C2FDFC007D6DE5 /* blurredBackgroundCreateMatch.png */,
+				EEC1C51E17C1204E006EE373 /* blurredBackgroundScoring.png */,
+				EEA204BF17333D80003D8350 /* leftHand.png */,
+				EEA204C017333D80003D8350 /* rightHand.png */,
+				1BC7367D173C1DD000AB3941 /* handsButton.png */,
+				1BC7367E173C1DD000AB3941 /* handsButton@2x.png */,
+				EE989D0416264E0F004F9B85 /* ScoreCricketOpeningDarkBlue-568h.png */,
+				EE4D77841592EDBB009929A4 /* helpPhoto.png */,
+				1BC7366B173AF7D200AB3941 /* hands.png */,
+				EE822578158AF10C00D84530 /* bluepin.png */,
+				EE822574158AEF2600D84530 /* clipViewBottom.png */,
+				EE822575158AEF2600D84530 /* clipViewTop.png */,
+				EE8225681586EAF300D84530 /* ScoreCricketOpeningDarkBlue.png */,
+				EE8225661586E38500D84530 /* blue_background.png */,
+				EE8225641586D99800D84530 /* GreenGradientBackground.png */,
+				EEDCC2CF1527ABDC00A9952C /* greenBackgroundSmall.jpg */,
+				EEDCC2C41525514E00A9952C /* Team1 */,
+				EEDCC2C51525514F00A9952C /* Team2 */,
+				EEDCC2B61522A6FC00A9952C /* CricketBat.png */,
+				EEDCC2A11522A5E700A9952C /* Ball.JPG */,
+				EEDCC2A21522A5E700A9952C /* BottomCurve.png */,
+				EEDCC2A31522A5E700A9952C /* greenBackground.jpg */,
+				EEDCC2A41522A5E700A9952C /* ScoreCricketOpening.jpg */,
+				EEDCC2A51522A5E700A9952C /* ScoreCricketOpeningDark.jpg */,
+				EEDCC2A61522A5E700A9952C /* ScoreCricketOpeningDarkGreen.png */,
+				EEDCC2A71522A5E700A9952C /* TopCurve.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		EEDCC26A151EFD6D00A9952C /* MainMenuScreen */ = {
+			isa = PBXGroup;
+			children = (
+				EEDCC26E151F007B00A9952C /* DKCMainMenuViewController.h */,
+				EEDCC26F151F007B00A9952C /* DKCMainMenuViewController.m */,
+			);
+			name = MainMenuScreen;
+			sourceTree = "<group>";
+		};
+		EEDCC276151F0F2A00A9952C /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				1B7B02BA17BE8A6000AE8F87 /* UIImage+StackBlur.h */,
+				1B7B02BB17BE8A6000AE8F87 /* UIImage+StackBlur.m */,
+				1BEF77511787496100336878 /* Reachability.h */,
+				1BEF77521787496200336878 /* Reachability.m */,
+				EEDCC277151F0F8600A9952C /* UIView+UIView_RoundCorner.h */,
+				EEDCC278151F0F8600A9952C /* UIView+UIView_RoundCorner.m */,
+				EEDCC2E31529155700A9952C /* UIButton+GradientColor.h */,
+				EEDCC2E41529155700A9952C /* UIButton+GradientColor.m */,
+				EED901391563689300896F18 /* NSDictionary+MutableDeepCopy.h */,
+				EED9013A1563689300896F18 /* NSDictionary+MutableDeepCopy.m */,
+				EE82256A15882E9600D84530 /* DKCCreatePList.h */,
+				EE82256B15882E9600D84530 /* DKCCreatePList.m */,
+				1BEF775417874B1B00336878 /* DKCReachability.h */,
+				1BEF775517874B1B00336878 /* DKCReachability.m */,
+			);
+			name = Infrastructure;
+			sourceTree = "<group>";
+		};
+		EEDCC2B91522D98D00A9952C /* CreateMatch */ = {
+			isa = PBXGroup;
+			children = (
+				EEDCC2BA1522D9EB00A9952C /* DKCCreateMatchViewController.h */,
+				EEDCC2BB1522D9EB00A9952C /* DKCCreateMatchViewController.m */,
+			);
+			name = CreateMatch;
+			sourceTree = "<group>";
+		};
+		EEDCC2CA1527998900A9952C /* CommonClasses */ = {
+			isa = PBXGroup;
+			children = (
+				EEDCC2CB15279A7500A9952C /* DKCEditTeamViewController.h */,
+				EEDCC2CC15279A7500A9952C /* DKCEditTeamViewController.m */,
+				EEDCC2D21527B2CD00A9952C /* DKCEditTeamCell.h */,
+				EEDCC2D31527B2CD00A9952C /* DKCEditTeamCell.m */,
+			);
+			name = CommonClasses;
+			sourceTree = "<group>";
+		};
+		EEDCC2DA1528F43600A9952C /* Scoring */ = {
+			isa = PBXGroup;
+			children = (
+				EEDCC2DB1528F47700A9952C /* DKCScoringViewController.h */,
+				EEDCC2DC1528F47700A9952C /* DKCScoringViewController.m */,
+				EEFC2FC9153E4D28000E835A /* DKCSelectBowlerViewController.h */,
+				EEFC2FCA153E4D28000E835A /* DKCSelectBowlerViewController.m */,
+				EEFC2FCD1540F65F000E835A /* DKCAdditionalRunsViewController.h */,
+				EEFC2FCE1540F65F000E835A /* DKCAdditionalRunsViewController.m */,
+				EEDE84BD15521C41005BD509 /* DKCOutViewController.h */,
+				EEDE84BE15521C41005BD509 /* DKCOutViewController.m */,
+				EEDE84C0155599C7005BD509 /* DKCSelectBatsmanViewController.h */,
+				EEDE84C1155599C7005BD509 /* DKCSelectBatsmanViewController.m */,
+			);
+			name = Scoring;
+			sourceTree = "<group>";
+		};
+		F96154B018A89FD2008FE4A9 /* GoogleAnalyticsServicesiOS_3.03a */ = {
+			isa = PBXGroup;
+			children = (
+				F96154B118A89FD2008FE4A9 /* GoogleAnalytics */,
+				F96154E518A89FD2008FE4A9 /* GoogleTagManager */,
+				F961552618A89FD2008FE4A9 /* libGoogleAnalyticsServices.a */,
+				F961552718A89FD2008FE4A9 /* Readme.txt */,
+			);
+			path = GoogleAnalyticsServicesiOS_3.03a;
+			sourceTree = "<group>";
+		};
+		F96154B118A89FD2008FE4A9 /* GoogleAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				F96154B218A89FD2008FE4A9 /* Changelog.txt */,
+				F96154DD18A89FD2008FE4A9 /* Library */,
+				F96154E418A89FD2008FE4A9 /* Readme.txt */,
+			);
+			path = GoogleAnalytics;
+			sourceTree = "<group>";
+		};
+		F96154DD18A89FD2008FE4A9 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				F96154DE18A89FD2008FE4A9 /* GAI.h */,
+				F96154DF18A89FD2008FE4A9 /* GAIDictionaryBuilder.h */,
+				F96154E018A89FD2008FE4A9 /* GAIFields.h */,
+				F96154E118A89FD2008FE4A9 /* GAILogger.h */,
+				F96154E218A89FD2008FE4A9 /* GAITrackedViewController.h */,
+				F96154E318A89FD2008FE4A9 /* GAITracker.h */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		F96154E518A89FD2008FE4A9 /* GoogleTagManager */ = {
+			isa = PBXGroup;
+			children = (
+				F96154E618A89FD2008FE4A9 /* Changelog.txt */,
+				F961551F18A89FD2008FE4A9 /* Library */,
+				F961552518A89FD2008FE4A9 /* Readme.txt */,
+			);
+			path = GoogleTagManager;
+			sourceTree = "<group>";
+		};
+		F961551F18A89FD2008FE4A9 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				F961552018A89FD2008FE4A9 /* TAGContainer.h */,
+				F961552118A89FD2008FE4A9 /* TAGContainerOpener.h */,
+				F961552218A89FD2008FE4A9 /* TAGDataLayer.h */,
+				F961552318A89FD2008FE4A9 /* TAGLogger.h */,
+				F961552418A89FD2008FE4A9 /* TAGManager.h */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EEDCC222151EBD2700A9952C /* Score Cricket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEDCC259151EBD2800A9952C /* Build configuration list for PBXNativeTarget "Score Cricket" */;
+			buildPhases = (
+				EEDCC21F151EBD2700A9952C /* Sources */,
+				EEDCC220151EBD2700A9952C /* Frameworks */,
+				EEDCC221151EBD2700A9952C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Score Cricket";
+			productName = "Score Cricket";
+			productReference = EEDCC223151EBD2700A9952C /* Score Cricket.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EEDCC21A151EBD2700A9952C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DKC;
+				LastUpgradeCheck = 0430;
+				TargetAttributes = {
+					EEDCC222151EBD2700A9952C = {
+						DevelopmentTeam = 46TZ85ZB65;
+					};
+				};
+			};
+			buildConfigurationList = EEDCC21D151EBD2700A9952C /* Build configuration list for PBXProject "Score Cricket" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EEDCC218151EBD2700A9952C;
+			productRefGroup = EEDCC224151EBD2700A9952C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EEDCC222151EBD2700A9952C /* Score Cricket */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EEDCC221151EBD2700A9952C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEDCC232151EBD2700A9952C /* InfoPlist.strings in Resources */,
+				EEDCC29F1522A43E00A9952C /* MainStoryboard_iPhone.storyboard in Resources */,
+				EEDCC2A81522A5E700A9952C /* Ball.JPG in Resources */,
+				EEDCC2AA1522A5E700A9952C /* BottomCurve.png in Resources */,
+				EEDCC2AC1522A5E700A9952C /* greenBackground.jpg in Resources */,
+				F961554718A89FD2008FE4A9 /* Readme.txt in Resources */,
+				EEDCC2AE1522A5E700A9952C /* ScoreCricketOpening.jpg in Resources */,
+				EEDCC2B01522A5E700A9952C /* ScoreCricketOpeningDark.jpg in Resources */,
+				EEDCC2B21522A5E700A9952C /* ScoreCricketOpeningDarkGreen.png in Resources */,
+				EEDCC2B41522A5E700A9952C /* TopCurve.png in Resources */,
+				EEDCC2B71522A6FC00A9952C /* CricketBat.png in Resources */,
+				EEDCC2C61525514F00A9952C /* Team1 in Resources */,
+				1BACAC4517EA5B9000C61896 /* Default-568h@2x.png in Resources */,
+				F961557418A89FD2008FE4A9 /* Readme.txt in Resources */,
+				EEDCC2C81525514F00A9952C /* Team2 in Resources */,
+				EEDCC2D01527ABDC00A9952C /* greenBackgroundSmall.jpg in Resources */,
+				EE8225651586D99800D84530 /* GreenGradientBackground.png in Resources */,
+				EE8225671586E38600D84530 /* blue_background.png in Resources */,
+				EE8225691586EAF300D84530 /* ScoreCricketOpeningDarkBlue.png in Resources */,
+				EE822576158AEF2700D84530 /* clipViewBottom.png in Resources */,
+				EE822577158AEF2700D84530 /* clipViewTop.png in Resources */,
+				EE822579158AF10D00D84530 /* bluepin.png in Resources */,
+				EE4D77851592EDBC009929A4 /* helpPhoto.png in Resources */,
+				EE989D0516264E0F004F9B85 /* ScoreCricketOpeningDarkBlue-568h.png in Resources */,
+				EE989D0816267C96004F9B85 /* ScoreCricketAppIcon1024x1024.png in Resources */,
+				EEA204C117333D80003D8350 /* leftHand.png in Resources */,
+				F961557218A89FD2008FE4A9 /* Readme.txt in Resources */,
+				EEA204C217333D80003D8350 /* rightHand.png in Resources */,
+				F961554818A89FD2008FE4A9 /* Changelog.txt in Resources */,
+				1BC7366C173AF7D200AB3941 /* hands.png in Resources */,
+				1BC7367F173C1DD000AB3941 /* handsButton.png in Resources */,
+				1BACAC4717EA5B9000C61896 /* Default~iphone.png in Resources */,
+				1BC73680173C1DD000AB3941 /* handsButton@2x.png in Resources */,
+				1B09176817BE846700F8AC2A /* Icon-72.png in Resources */,
+				1B09176917BE846700F8AC2A /* Icon-72@2x.png in Resources */,
+				1B09176A17BE846700F8AC2A /* Icon-Small-50.png in Resources */,
+				1B09176B17BE846700F8AC2A /* Icon-Small-50@2x.png in Resources */,
+				1B09176C17BE846700F8AC2A /* Icon-Small.png in Resources */,
+				1BACAC4617EA5B9000C61896 /* Default.png in Resources */,
+				1B09176D17BE846700F8AC2A /* Icon-Small@2x.png in Resources */,
+				1B09176E17BE846700F8AC2A /* Icon.png in Resources */,
+				1B09176F17BE846700F8AC2A /* Icon@2x.png in Resources */,
+				1B09177017BE846700F8AC2A /* iTunesArtwork.png in Resources */,
+				1B09177117BE846700F8AC2A /* iTunesArtwork@2x.png in Resources */,
+				EEC1C51F17C1204E006EE373 /* blurredBackgroundScoring.png in Resources */,
+				EE4C22C317C2FDFC007D6DE5 /* blurredBackgroundCreateMatch.png in Resources */,
+				1B7B02F617C68C8300AE8F87 /* Ball.png in Resources */,
+				F961552818A89FD2008FE4A9 /* Changelog.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEDCC21F151EBD2700A9952C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEDCC234151EBD2700A9952C /* main.m in Sources */,
+				EEDCC238151EBD2700A9952C /* DKCAppDelegate.m in Sources */,
+				EEDCC241151EBD2700A9952C /* DKCViewController.m in Sources */,
+				EEDCC270151F007B00A9952C /* DKCMainMenuViewController.m in Sources */,
+				EEDCC279151F0F8600A9952C /* UIView+UIView_RoundCorner.m in Sources */,
+				EEDCC2BC1522D9EB00A9952C /* DKCCreateMatchViewController.m in Sources */,
+				EEDCC2CD15279A7500A9952C /* DKCEditTeamViewController.m in Sources */,
+				EEDCC2D41527B2CD00A9952C /* DKCEditTeamCell.m in Sources */,
+				EEDCC2DD1528F47700A9952C /* DKCScoringViewController.m in Sources */,
+				EEDCC2E51529155700A9952C /* UIButton+GradientColor.m in Sources */,
+				EEFC2FCB153E4D28000E835A /* DKCSelectBowlerViewController.m in Sources */,
+				1BF1171717DA81EE004D7067 /* DKCDynamicCollectionViewFlowLayout.m in Sources */,
+				EEFC2FCF1540F660000E835A /* DKCAdditionalRunsViewController.m in Sources */,
+				EEDE84BF15521C41005BD509 /* DKCOutViewController.m in Sources */,
+				EEDE84C2155599C8005BD509 /* DKCSelectBatsmanViewController.m in Sources */,
+				EED9013B1563689300896F18 /* NSDictionary+MutableDeepCopy.m in Sources */,
+				EED901431565F15800896F18 /* DKCScoreCardViewController.m in Sources */,
+				EE842DF315727C24006074DF /* DKCScoreCardBattingTableViewCell.m in Sources */,
+				1BF1171117DA6F65004D7067 /* DKCMatchesListCollectionViewController.m in Sources */,
+				EE842DF715770AD3006074DF /* DKCScoreCordBowlingTableViewCell.m in Sources */,
+				EE8225631585830A00D84530 /* DKCScoreCardHeaderView.m in Sources */,
+				EE82256C15882E9600D84530 /* DKCCreatePList.m in Sources */,
+				1BF1171417DA7105004D7067 /* DKCMatchesListCollectionViewCell.m in Sources */,
+				EE82257015898FD200D84530 /* DKCListOfMatchesViewController.m in Sources */,
+				EE822573158AE44D00D84530 /* DKCListOfMatchesCell.m in Sources */,
+				1BEF77451787205300336878 /* Appirater.m in Sources */,
+				1BEF77531787496200336878 /* Reachability.m in Sources */,
+				1B7B02B917BE877400AE8F87 /* DKCReachability.m in Sources */,
+				1B7B02BC17BE8A6000AE8F87 /* UIImage+StackBlur.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EEDCC230151EBD2700A9952C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEDCC231151EBD2700A9952C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EEDCC251151EBD2800A9952C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEDCC252151EBD2800A9952C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EEDCC257151EBD2800A9952C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dinesh Challa (8N5A6T7RGD)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B2CE3881-EB34-49C9-B37C-22B6F1F2C655";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EEDCC258151EBD2800A9952C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dinesh Challa (8N5A6T7RGD)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B2CE3881-EB34-49C9-B37C-22B6F1F2C655";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EEDCC25A151EBD2800A9952C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dinesh Challa (46TZ85ZB65)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dinesh Challa (46TZ85ZB65)";
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Score Cricket/Score Cricket-Prefix.pch";
+				INFOPLIST_FILE = "Score Cricket/Score Cricket-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Score Cricket/GoogleAnalyticsServicesiOS_3.03a\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "956A88E4-903B-4B60-AB92-88D588823D24";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "956A88E4-903B-4B60-AB92-88D588823D24";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = armv7;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EEDCC25B151EBD2800A9952C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dinesh Challa (46TZ85ZB65)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dinesh Challa (46TZ85ZB65)";
+				FRAMEWORK_SEARCH_PATHS = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Score Cricket/Score Cricket-Prefix.pch";
+				INFOPLIST_FILE = "Score Cricket/Score Cricket-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Score Cricket/GoogleAnalyticsServicesiOS_3.03a\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "956A88E4-903B-4B60-AB92-88D588823D24";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "956A88E4-903B-4B60-AB92-88D588823D24";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = armv7;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EEDCC21D151EBD2700A9952C /* Build configuration list for PBXProject "Score Cricket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEDCC257151EBD2800A9952C /* Debug */,
+				EEDCC258151EBD2800A9952C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEDCC259151EBD2800A9952C /* Build configuration list for PBXNativeTarget "Score Cricket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEDCC25A151EBD2800A9952C /* Debug */,
+				EEDCC25B151EBD2800A9952C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EEDCC21A151EBD2700A9952C /* Project object */;
+}
