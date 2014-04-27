@@ -99,6 +99,7 @@
 		F961557C18A8A01F008FE4A9 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F961557B18A8A01F008FE4A9 /* AdSupport.framework */; };
 		F961557E18A8A02D008FE4A9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F961557D18A8A02D008FE4A9 /* CoreData.framework */; };
 		F961558018A8A045008FE4A9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F961557F18A8A045008FE4A9 /* libz.dylib */; };
+		F9E862E8190D96CB0015A003 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E862E7190D96CB0015A003 /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -242,6 +243,7 @@
 		F961557B18A8A01F008FE4A9 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		F961557D18A8A02D008FE4A9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F961557F18A8A045008FE4A9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		F9E862E7190D96CB0015A003 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +251,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9E862E8190D96CB0015A003 /* iAd.framework in Frameworks */,
 				F961558018A8A045008FE4A9 /* libz.dylib in Frameworks */,
 				1BEF77491787232100336878 /* SystemConfiguration.framework in Frameworks */,
 				F961557E18A8A02D008FE4A9 /* CoreData.framework in Frameworks */,
@@ -356,6 +359,7 @@
 		EEDCC226151EBD2700A9952C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F9E862E7190D96CB0015A003 /* iAd.framework */,
 				F961557F18A8A045008FE4A9 /* libz.dylib */,
 				F961557D18A8A02D008FE4A9 /* CoreData.framework */,
 				F961557B18A8A01F008FE4A9 /* AdSupport.framework */,

@@ -11,9 +11,11 @@
 #import "DKCCReatePlist.h"
 #import "UIImage+StackBlur.h"
 
+
 @interface DKCScoringViewController ()
 @property (nonatomic) BOOL didEndInnings;
 @property (nonatomic) BOOL isHelpImageVisible;
+@property (nonatomic) BOOL bannerIsVisible;
 @end
 
 
@@ -54,7 +56,6 @@
 @synthesize oversDigit2;
 @synthesize oversDecimalDigit;
 
-@synthesize inningTitle;
 @synthesize runRate;
 @synthesize thisOverRuns;
 
@@ -94,29 +95,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+	//self.bannerIsVisible = YES;
     self.title = @"Score Cricket";
     self.screenName = @"Scoring";
     didEndInnings = NO;
     
     self.navigationItem.backBarButtonItem = nil;
-   /* [button0 addGradientWithCornerRadius:8];
-    [button1 addGradientWithCornerRadius:8];
-    [button2 addGradientWithCornerRadius:8];
-    [button3 addGradientWithCornerRadius:8];
-    [button4 addGradientWithCornerRadius:8];
-    [button6 addGradientWithCornerRadius:8];
-    [buttonNumberPlus1 addGradientWithCornerRadius:8];
-    
-    [bye addGradientWithCornerRadius:8];
-    [legbye addGradientWithCornerRadius:8];
-    [noball addGradientWithCornerRadius:8];
-    [wideBall addGradientWithCornerRadius:8];
-    
-    
-    [endinnings addGradientWithCornerRadius:8];
-    [undo addGradientWithCornerRadius:8];
-    [outBatsman addGradientWithCornerRadius:8];
-    */
     onStrikeIconButton.layer.cornerRadius = onStrikeIconButton.frame.size.width/2;
     runnersEndIconButton.layer.cornerRadius = runnersEndIconButton.frame.size.width/2;
     [bowlerIconButton addGradientWithCornerRadius:10];
@@ -146,7 +130,7 @@
     
     NSString *currentInnings = [self.MatchData objectForKey:@"CurrentInnings"];
     NSString *battingTeam = [[self.MatchData objectForKey:currentInnings] objectForKey:@"BattingTeam"];
-    self.inningTitle.text = [NSString stringWithFormat:@"%@ Innings",[[self.MatchData objectForKey:battingTeam] objectForKey:@"TeamName"]];
+    self.title = [NSString stringWithFormat:@"%@ Innings",[[self.MatchData objectForKey:battingTeam] objectForKey:@"TeamName"]];
     
     [self.team1Button setTitle:[[self.MatchData objectForKey:@"Team1"] objectForKey:@"TeamName"] forState:UIControlStateNormal];
     [self.team2Button setTitle:[[self.MatchData objectForKey:@"Team2"] objectForKey:@"TeamName"] forState:UIControlStateNormal];
@@ -164,7 +148,27 @@
     
     self.backgroundImageView.image = [self.backgroundImageView.image stackBlur:60];
     [self addMotionAffect];
+	//[self letterPresseAddectToLabel:self.scoreCricket];
     
+}
+
+- (void)letterPresseAddectToLabel:(UILabel *)label
+{
+	//Use any font you want or skip defining it
+	UIFont* font = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
+	
+	//Use any color you want or skip defining it
+	UIColor* textColor = [UIColor blackColor];
+	
+	NSDictionary *attrs = @{ NSForegroundColorAttributeName : textColor,
+							 NSFontAttributeName : font,
+							 NSTextEffectAttributeName : NSTextEffectLetterpressStyle};
+	
+	NSAttributedString* attrString = [[NSAttributedString alloc]
+									  initWithString:label.text
+									  attributes:attrs];
+	
+	label.attributedText = attrString;
 }
 
 - (void)addMotionAffect
@@ -213,7 +217,6 @@
     [self.oversDigit1 addMotionEffect:group];
     [self.oversDigit2 addMotionEffect:group];
     [self.oversDecimalDigit addMotionEffect:group];
-    [self.inningTitle addMotionEffect:group];
     [self.runRate addMotionEffect:group];
     [self.thisOverRuns addMotionEffect:group];
     [self.team1Button addMotionEffect:group];
@@ -265,11 +268,11 @@
     if ([currentInnings isEqualToString:@"SecondInnings"]) 
     {
         int score = [[[[self.MatchData objectForKey:@"FirstInnings"] objectForKey:@"Statistics"] objectForKey:@"Score"] integerValue];
-        self.inningTitle.text = [NSString stringWithFormat:@"%@ Innings (Target: %d)",[[self.MatchData objectForKey:battingTeam] objectForKey:@"TeamName"],score+1];
+        self.title = [NSString stringWithFormat:@"%@ Innings (Target: %d)",[[self.MatchData objectForKey:battingTeam] objectForKey:@"TeamName"],score+1];
     }
     else 
     {
-        self.inningTitle.text = [NSString stringWithFormat:@"%@ Innings",[[self.MatchData objectForKey:battingTeam] objectForKey:@"TeamName"]];    
+        self.title = [NSString stringWithFormat:@"%@ Innings",[[self.MatchData objectForKey:battingTeam] objectForKey:@"TeamName"]];
     }
     
     [self UpdateScoreBoard];
@@ -312,12 +315,6 @@
     editTeam.delegate=self;
     editTeam.tableData = teamTableData;
     editTeam.fromScoringViewController = YES;
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        UIImage *tempImg = [self blurredBackgroundImage];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            editTeam.backgroundBlurredImage = tempImg;
-        });
-    });
     UINavigationController *tempNavController = [[UINavigationController alloc] initWithRootViewController:editTeam];
     tempNavController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
     tempNavController.navigationItem.rightBarButtonItem = UIBarButtonSystemItemDone;
@@ -333,11 +330,11 @@
     if ([currentInnings isEqualToString:@"SecondInnings"]) 
     {
         int score = [[[[self.MatchData objectForKey:@"FirstInnings"] objectForKey:@"Statistics"] objectForKey:@"Score"] integerValue];
-        self.inningTitle.text = [NSString stringWithFormat:@"%@ Innings (Target: %d)",[[self.MatchData objectForKey:battingTeam] objectForKey:@"TeamName"],score+1];
+        self.title= [NSString stringWithFormat:@"%@ Innings (Target: %d)",[[self.MatchData objectForKey:battingTeam] objectForKey:@"TeamName"],score+1];
     }
     else 
     {
-        self.inningTitle.text = [NSString stringWithFormat:@"%@ Innings",[[self.MatchData objectForKey:battingTeam] objectForKey:@"TeamName"]];    
+        self.title = [NSString stringWithFormat:@"%@ Innings",[[self.MatchData objectForKey:battingTeam] objectForKey:@"TeamName"]];
     }
     
     [self UpdateScoreBoard];
@@ -1129,12 +1126,6 @@
     DKCAdditionalRunsViewController *tempAddRuns = [self.storyboard instantiateViewControllerWithIdentifier:@"AdditionalRunsViewController"];
     tempAddRuns.delegate=self;
     tempAddRuns.ExtraType = ExtraType;
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        UIImage *tempImg = [self blurredBackgroundImage];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            tempAddRuns.backgroundBlurImage = tempImg;
-        });
-    });
     [self presentModalViewController:tempAddRuns animated:YES];
     
 }
@@ -1172,7 +1163,7 @@
                 NSString *currentInnings = [self.MatchData objectForKey:@"CurrentInnings"];
                 NSString *battingTeam = [[self.MatchData objectForKey:currentInnings] objectForKey:@"BattingTeam"];
                 int score = [[[[self.MatchData objectForKey:@"FirstInnings"] objectForKey:@"Statistics"] objectForKey:@"Score"] integerValue];
-                self.inningTitle.text = [NSString stringWithFormat:@"%@ Innings (Target: %d)",[[self.MatchData objectForKey:battingTeam] objectForKey:@"TeamName"],score+1];
+                self.title = [NSString stringWithFormat:@"%@ Innings (Target: %d)",[[self.MatchData objectForKey:battingTeam] objectForKey:@"TeamName"],score+1];
                 self.MatchDataCopy = [self.MatchData mutableDeepCopy];
                 [DKCCreatePList CreatePlistDictionaryWithName:[self.MatchData objectForKey:@"FileName"] withData:self.MatchData];
             }
@@ -1234,13 +1225,6 @@
     NSString *bowlingTeam = [[self.MatchData objectForKey:currentInnings] objectForKey:@"BowlingTeam"];
     NSString *battingTeam = [[self.MatchData objectForKey:currentInnings] objectForKey:@"BattingTeam"];
     DKCOutViewController *outViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"OutViewController"];
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        UIImage *tempImg = [self blurredBackgroundImage];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            outViewController.backgroundBlurImage = tempImg;
-        });
-    });
-    
     
     outViewController.delegate = self;
     outViewController.by = [self.MatchData objectForKey:bowlingTeam];
@@ -1284,12 +1268,6 @@
     }
     DKCSelectBowlerViewController *selectBowler = [self.storyboard instantiateViewControllerWithIdentifier:@"SelectBowlerViewController"];
     selectBowler.delegate = self;
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        UIImage *tempImg = [self blurredBackgroundImage];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            selectBowler.backgroundBlurImage = tempImg;
-        });
-    });
     if (sender==nil) //if overup and called to this function
     {
         selectBowler.hardStop = YES;
@@ -1352,12 +1330,6 @@
     {
         DKCSelectBatsmanViewController *selectBatsman = [self.storyboard instantiateViewControllerWithIdentifier:@"SelectBatsmanViewController"];
         selectBatsman.delegate = self;
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            UIImage *tempImg = [self blurredBackgroundImage];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                selectBatsman.backgroundBlurImage = tempImg;
-            });
-        });
         NSString *oldBatsman = isOnStrike?[[self.MatchData objectForKey:currentInnings] objectForKey:@"OnStrike"]:[[self.MatchData objectForKey:currentInnings] objectForKey:@"RunnersEnd"];
         
         selectBatsman.batsmans = [self.MatchData objectForKey:battingTeam];
@@ -1416,12 +1388,6 @@
     {
         DKCSelectBatsmanViewController *selectBatsman = [self.storyboard instantiateViewControllerWithIdentifier:@"SelectBatsmanViewController"];
         selectBatsman.delegate = self;
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            UIImage *tempImg = [self blurredBackgroundImage];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                selectBatsman.backgroundBlurImage = tempImg;
-            });
-        });
         NSString *oldBatsman = [outData objectForKey:@"outBatsman"];
         selectBatsman.outData = outData;
         selectBatsman.batsmans = [self.MatchData objectForKey:battingTeam];
@@ -1593,13 +1559,29 @@
     
 }
 
--(UIImage *)blurredBackgroundImage
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner
 {
-    UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, YES, 3);
-    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return [img stackBlur:60];
+    if (!self.bannerIsVisible)
+    {
+        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
+		// Assumes the banner view is just off the bottom of the screen.
+        banner.frame = CGRectOffset(banner.frame, 0, -banner.frame.size.height);
+        [UIView commitAnimations];
+        self.bannerIsVisible = YES;
+    }
 }
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+	if (self.bannerIsVisible)
+    {
+        [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
+		// Assumes the banner view is placed at the bottom of the screen.
+        banner.frame = CGRectOffset(banner.frame, 0, banner.frame.size.height);
+        [UIView commitAnimations];
+        self.bannerIsVisible = NO;
+    }
+}
+
 
 @end

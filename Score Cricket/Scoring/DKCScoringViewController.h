@@ -17,9 +17,10 @@
 #import "DKCSelectBatsmanViewController.h"
 #import "../ScoreCard/DKCScoreCardViewController.h"
 #import "GAITrackedViewController.h"
+#import "iAd/ADBannerView.h"
 
 
-@interface DKCScoringViewController : GAITrackedViewController <EditTeamViewDelegate,SelectBowlerViewDelegate,AdditionalRunsViewDelegate,OutViewDelegate,SelectBatsmanViewDelegate,UIActionSheetDelegate>
+@interface DKCScoringViewController : GAITrackedViewController <EditTeamViewDelegate,SelectBowlerViewDelegate,AdditionalRunsViewDelegate,OutViewDelegate,SelectBatsmanViewDelegate,UIActionSheetDelegate,ADBannerViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UIButton *button0;
 @property (nonatomic, strong) IBOutlet UIButton *button1;
@@ -56,7 +57,6 @@
 @property (nonatomic, strong) IBOutlet UILabel *oversDigit2;
 @property (nonatomic, strong) IBOutlet UILabel *oversDecimalDigit;
 
-@property (nonatomic, strong) IBOutlet UILabel *inningTitle;
 @property (nonatomic, strong) IBOutlet UILabel *runRate;
 @property (nonatomic, strong) IBOutlet UILabel *thisOverRuns;
 
@@ -79,6 +79,7 @@
 @property (nonatomic, strong) IBOutlet UILabel *decimalMainOvers;
 @property (nonatomic, strong) IBOutlet UILabel *decimalBowlerOvers;
 
+@property (nonatomic, strong) IBOutlet UILabel *scoreCricket;
 @property (nonatomic, strong) NSMutableArray *stackUndo;
 @property (nonatomic) NSInteger head;
 @property (nonatomic) NSInteger maxUndo;
