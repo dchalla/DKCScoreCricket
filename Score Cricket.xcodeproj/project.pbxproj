@@ -100,6 +100,12 @@
 		F961557E18A8A02D008FE4A9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F961557D18A8A02D008FE4A9 /* CoreData.framework */; };
 		F961558018A8A045008FE4A9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F961557F18A8A045008FE4A9 /* libz.dylib */; };
 		F9E862E8190D96CB0015A003 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E862E7190D96CB0015A003 /* iAd.framework */; };
+		F9E862EE190DDA630015A003 /* DKCPlayerNameAutocompleteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E862EB190DDA630015A003 /* DKCPlayerNameAutocompleteManager.m */; };
+		F9E862EF190DDA630015A003 /* HTAutocompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E862ED190DDA630015A003 /* HTAutocompleteTextField.m */; };
+		F9E862F2190DE2E30015A003 /* autocompleteButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F9E862F0190DE2E30015A003 /* autocompleteButton.png */; };
+		F9E862F3190DE2E30015A003 /* autocompleteButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9E862F1190DE2E30015A003 /* autocompleteButton@2x.png */; };
+		F9E862F7190E07610015A003 /* PJTernarySearchTree.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E862F6190E07610015A003 /* PJTernarySearchTree.m */; };
+		F9E862FA190E07B80015A003 /* DKCPlayersDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E862F9190E07B80015A003 /* DKCPlayersDatasource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -244,6 +250,16 @@
 		F961557D18A8A02D008FE4A9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F961557F18A8A045008FE4A9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		F9E862E7190D96CB0015A003 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		F9E862EA190DDA630015A003 /* DKCPlayerNameAutocompleteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKCPlayerNameAutocompleteManager.h; sourceTree = "<group>"; };
+		F9E862EB190DDA630015A003 /* DKCPlayerNameAutocompleteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKCPlayerNameAutocompleteManager.m; sourceTree = "<group>"; };
+		F9E862EC190DDA630015A003 /* HTAutocompleteTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTAutocompleteTextField.h; sourceTree = "<group>"; };
+		F9E862ED190DDA630015A003 /* HTAutocompleteTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTAutocompleteTextField.m; sourceTree = "<group>"; };
+		F9E862F0190DE2E30015A003 /* autocompleteButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = autocompleteButton.png; sourceTree = "<group>"; };
+		F9E862F1190DE2E30015A003 /* autocompleteButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "autocompleteButton@2x.png"; sourceTree = "<group>"; };
+		F9E862F5190E07610015A003 /* PJTernarySearchTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PJTernarySearchTree.h; sourceTree = "<group>"; };
+		F9E862F6190E07610015A003 /* PJTernarySearchTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJTernarySearchTree.m; sourceTree = "<group>"; };
+		F9E862F8190E07B80015A003 /* DKCPlayersDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCPlayersDatasource.h; path = Infrastructure/DKCPlayersDatasource.h; sourceTree = "<group>"; };
+		F9E862F9190E07B80015A003 /* DKCPlayersDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCPlayersDatasource.m; path = Infrastructure/DKCPlayersDatasource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,6 +395,8 @@
 		EEDCC22D151EBD2700A9952C /* Score Cricket */ = {
 			isa = PBXGroup;
 			children = (
+				F9E862F4190E07610015A003 /* PJTernarySearchTree */,
+				F9E862E9190DDA630015A003 /* HTTextField */,
 				F96154B018A89FD2008FE4A9 /* GoogleAnalyticsServicesiOS_3.03a */,
 				1B09175D17BE844E00F8AC2A /* AppIcon */,
 				1BEF77411787203E00336878 /* Appirater */,
@@ -499,6 +517,8 @@
 				EE82256B15882E9600D84530 /* DKCCreatePList.m */,
 				1BEF775417874B1B00336878 /* DKCReachability.h */,
 				1BEF775517874B1B00336878 /* DKCReachability.m */,
+				F9E862F8190E07B80015A003 /* DKCPlayersDatasource.h */,
+				F9E862F9190E07B80015A003 /* DKCPlayersDatasource.m */,
 			);
 			name = Infrastructure;
 			sourceTree = "<group>";
@@ -596,6 +616,28 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
+		F9E862E9190DDA630015A003 /* HTTextField */ = {
+			isa = PBXGroup;
+			children = (
+				F9E862F0190DE2E30015A003 /* autocompleteButton.png */,
+				F9E862F1190DE2E30015A003 /* autocompleteButton@2x.png */,
+				F9E862EA190DDA630015A003 /* DKCPlayerNameAutocompleteManager.h */,
+				F9E862EB190DDA630015A003 /* DKCPlayerNameAutocompleteManager.m */,
+				F9E862EC190DDA630015A003 /* HTAutocompleteTextField.h */,
+				F9E862ED190DDA630015A003 /* HTAutocompleteTextField.m */,
+			);
+			path = HTTextField;
+			sourceTree = "<group>";
+		};
+		F9E862F4190E07610015A003 /* PJTernarySearchTree */ = {
+			isa = PBXGroup;
+			children = (
+				F9E862F5190E07610015A003 /* PJTernarySearchTree.h */,
+				F9E862F6190E07610015A003 /* PJTernarySearchTree.m */,
+			);
+			path = PJTernarySearchTree;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -668,6 +710,7 @@
 				F961557418A89FD2008FE4A9 /* Readme.txt in Resources */,
 				EEDCC2C81525514F00A9952C /* Team2 in Resources */,
 				EEDCC2D01527ABDC00A9952C /* greenBackgroundSmall.jpg in Resources */,
+				F9E862F2190DE2E30015A003 /* autocompleteButton.png in Resources */,
 				EE8225651586D99800D84530 /* GreenGradientBackground.png in Resources */,
 				EE8225671586E38600D84530 /* blue_background.png in Resources */,
 				EE8225691586EAF300D84530 /* ScoreCricketOpeningDarkBlue.png in Resources */,
@@ -679,6 +722,7 @@
 				EE989D0816267C96004F9B85 /* ScoreCricketAppIcon1024x1024.png in Resources */,
 				EEA204C117333D80003D8350 /* leftHand.png in Resources */,
 				F961557218A89FD2008FE4A9 /* Readme.txt in Resources */,
+				F9E862F3190DE2E30015A003 /* autocompleteButton@2x.png in Resources */,
 				EEA204C217333D80003D8350 /* rightHand.png in Resources */,
 				F961554818A89FD2008FE4A9 /* Changelog.txt in Resources */,
 				1BC7366C173AF7D200AB3941 /* hands.png in Resources */,
@@ -718,6 +762,7 @@
 				EEDCC2BC1522D9EB00A9952C /* DKCCreateMatchViewController.m in Sources */,
 				EEDCC2CD15279A7500A9952C /* DKCEditTeamViewController.m in Sources */,
 				EEDCC2D41527B2CD00A9952C /* DKCEditTeamCell.m in Sources */,
+				F9E862EF190DDA630015A003 /* HTAutocompleteTextField.m in Sources */,
 				EEDCC2DD1528F47700A9952C /* DKCScoringViewController.m in Sources */,
 				EEDCC2E51529155700A9952C /* UIButton+GradientColor.m in Sources */,
 				EEFC2FCB153E4D28000E835A /* DKCSelectBowlerViewController.m in Sources */,
@@ -729,9 +774,12 @@
 				EED901431565F15800896F18 /* DKCScoreCardViewController.m in Sources */,
 				EE842DF315727C24006074DF /* DKCScoreCardBattingTableViewCell.m in Sources */,
 				1BF1171117DA6F65004D7067 /* DKCMatchesListCollectionViewController.m in Sources */,
+				F9E862EE190DDA630015A003 /* DKCPlayerNameAutocompleteManager.m in Sources */,
+				F9E862F7190E07610015A003 /* PJTernarySearchTree.m in Sources */,
 				EE842DF715770AD3006074DF /* DKCScoreCordBowlingTableViewCell.m in Sources */,
 				EE8225631585830A00D84530 /* DKCScoreCardHeaderView.m in Sources */,
 				EE82256C15882E9600D84530 /* DKCCreatePList.m in Sources */,
+				F9E862FA190E07B80015A003 /* DKCPlayersDatasource.m in Sources */,
 				1BF1171417DA7105004D7067 /* DKCMatchesListCollectionViewCell.m in Sources */,
 				EE82257015898FD200D84530 /* DKCListOfMatchesViewController.m in Sources */,
 				EE822573158AE44D00D84530 /* DKCListOfMatchesCell.m in Sources */,

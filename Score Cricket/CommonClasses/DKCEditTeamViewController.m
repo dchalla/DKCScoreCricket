@@ -13,6 +13,9 @@
 #import "GAIDictionaryBuilder.h"
 #import "GAIFields.h"
 #import "GAILogger.h"
+#import "DKCPlayerNameAutocompleteManager.h"
+#import "DKCPlayersDatasource.h"
+
 
 @interface DKCEditTeamViewController ()
 {
@@ -76,9 +79,11 @@
     tempBackgroundViewFrme.size.height+=30;
     
     self.tableView.backgroundColor = [UIColor clearColor];
-    self.txtField=[[UITextField alloc]initWithFrame:CGRectZero];
+    self.txtField=[[HTAutocompleteTextField alloc]initWithFrame:CGRectZero];
+	self.txtField.autocompleteDataSource = [DKCPlayerNameAutocompleteManager sharedManager];
     self.txtField.autoresizingMask=UIViewAutoresizingFlexibleHeight;
     self.txtField.autoresizesSubviews=YES;
+	self.txtField.showAutocompleteButton = YES;
     [self.txtField setBorderStyle:UITextBorderStyleRoundedRect];
     self.txtField.contentVerticalAlignment=UIControlContentVerticalAlignmentCenter;
     SelectedRow=-1;
@@ -281,6 +286,7 @@
             {
                 NSString *tempTeamName = [self.tableData objectForKey:@"TeamName"];
                 tempTeamName=self.txtField.text;
+				[[DKCPlayersDatasource sharedPlayersDatasource] insertPlayerName:tempTeamName];
                 [self.tableData setObject:tempTeamName forKey:@"TeamName"];
                 [self.tableView reloadData];
                 
@@ -289,6 +295,7 @@
             {
                 NSString *tempPlayer = [[self.tableData objectForKey: [NSString stringWithFormat:@"P%d",SelectedRow]]objectForKey:@"Name"];
                 tempPlayer=self.txtField.text;
+				[[DKCPlayersDatasource sharedPlayersDatasource] insertPlayerName:tempPlayer];
                 [[self.tableData objectForKey: [NSString stringWithFormat:@"P%d",SelectedRow]] setObject:tempPlayer forKey:@"Name"];
                 [self.tableView reloadData];
             }
@@ -299,6 +306,8 @@
         
         UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         self.txtField.frame=cell.frame;
+		self.txtField.text = @"";
+		[self.txtField forceRefreshAutocompleteText];
         if(indexPath.row==0)
         {
             self.txtField.text=[self.tableData objectForKey:@"TeamName"];

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DKCEditTeamCell.h"
+#import "HTAutocompleteTextField.h"
 
 @protocol EditTeamViewDelegate <NSObject>
 @required
@@ -17,7 +18,7 @@
 @interface DKCEditTeamViewController : UITableViewController
 
 @property (nonatomic, strong) NSMutableDictionary *tableData;
-@property (nonatomic, strong) UITextField *txtField;
+@property (nonatomic, strong) HTAutocompleteTextField *txtField;
 @property (nonatomic, strong) id<EditTeamViewDelegate> delegate;
 @property (nonatomic, strong) UIImage *backgroundBlurredImage;
 @property (nonatomic) BOOL fromScoringViewController;
