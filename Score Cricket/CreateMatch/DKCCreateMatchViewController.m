@@ -10,6 +10,7 @@
 #import "DKCCreatePList.h"
 #import "UIImage+StackBlur.h"
 #import <QuartzCore/QuartzCore.h>
+#import <Parse/Parse.h>
 
 @interface DKCCreateMatchViewController ()
 {
@@ -334,6 +335,8 @@
     
     //Add match to ListOfMatches
     [DKCCreatePList AddObjectToMatchesListWithFileName:fileName andTeam1:[[tempDict objectForKey:@"Team1"] objectForKey:@"TeamName"] andTeam2:[[tempDict objectForKey:@"Team2"] objectForKey:@"TeamName"]];
+	
+	[DKCCreatePList CreateParseObjectWithFileName:fileName matchData:tempDict status:@"current"];
     
     NSLog(@"%@",[[tempDict objectForKey:@"Team1"] objectForKey:@"TeamName"]);
     

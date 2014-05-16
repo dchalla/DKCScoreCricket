@@ -15,6 +15,7 @@
 #include "TargetConditionals.h"
 #endif
 #import "DKCPlayersDatasource.h"
+#import <Parse/Parse.h>
 
 @implementation DKCAppDelegate
 
@@ -45,6 +46,10 @@
 	// Initialize tracker.
 	id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-47902581-1"];
 	
+	[Parse setApplicationId:@"vD1gL4YcvheVfDOdl7gk4ZPIUQ8rPkOZuHUUT6h5"
+				  clientKey:@"Nb8PDaKSm9UcKxyvFNbk2hTII6Q5SOUhCFIxZ0Fy"];
+	
+	[PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     return YES;
 }
@@ -93,6 +98,7 @@ annotation {
         [DKCCreatePList DeleteMatchWithFileName:fileName];
         
         [DKCCreatePList CreatePlistDictionaryWithName:fileName withData:tempDict];
+		[DKCCreatePList UpdateParseObjectWithFileName:fileName matchData:tempDict status:@"current"];
         
         //Add match to ListOfMatches
         [DKCCreatePList AddObjectToMatchesListWithFileName:fileName andTeam1:[[tempDict objectForKey:@"Team1"] objectForKey:@"TeamName"] andTeam2:[[tempDict objectForKey:@"Team2"] objectForKey:@"TeamName"]];

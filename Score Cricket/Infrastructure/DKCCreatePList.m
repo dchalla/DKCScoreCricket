@@ -7,6 +7,7 @@
 //
 
 #import "DKCCreatePList.h"
+#import <Parse/Parse.h>
 
 @implementation DKCCreatePList
 
@@ -134,6 +135,51 @@
     [self CreatePlistArrayWithName:@"ListOfMatches" withData:matchesList];
 
 }
+
++ (void) CreateParseObjectWithFileName:(NSString *)fileName matchData:(NSMutableDictionary *)matchData status:(NSString *)status
+{
+    PFObject *pf_MatchObject = [PFObject objectWithClassName:@"DevMatches2"];
+	[pf_MatchObject setObject:fileName forKey:@"FileName"];
+    [pf_MatchObject setObject:matchData[@"Team1"][@"TeamName"] forKey:@"Team1"];
+    [pf_MatchObject setObject:matchData[@"Team2"][@"TeamName"] forKey:@"Team2"];
+    [pf_MatchObject setObject:status forKey:@"isCurrent"];
+	[pf_MatchObject setObject:status forKey:@"Status"];
+	[pf_MatchObject setObject:matchData forKey:@"MatchData"];
+	[pf_MatchObject setObject:[NSDate date] forKey:@"MatchStartDate"];
+	[pf_MatchObject saveInBackground];
+	
+}
+
++ (void) UpdateParseObjectWithFileName:(NSString *)fileName matchData:(NSMutableDictionary *)matchData status:(NSString *)status
+{
+	NSMutableDictionary *matchDataCopy = [matchData mutableCopy];
+	PFQuery *query = [PFQuery queryWithClassName:@"DevMatches2"];
+	[query whereKey:@"FileName" equalTo:fileName];
+	[query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+		if (!error)
+		{
+			NSLog(@"Successfully Parse retrieved %d match data.", objects.count);
+			
+			if (objects.count)
+			{
+				PFObject *pf_MatchObject = [objects objectAtIndex:0];
+				[pf_MatchObject setObject:matchDataCopy[@"Team1"][@"TeamName"] forKey:@"Team1"];
+				[pf_MatchObject setObject:matchDataCopy[@"Team2"][@"TeamName"] forKey:@"Team2"];
+				[pf_MatchObject setObject:status forKey:@"isCurrent"];
+				[pf_MatchObject setObject:status forKey:@"Status"];
+				[pf_MatchObject setObject:matchDataCopy forKey:@"MatchData"];
+				[pf_MatchObject saveInBackground];
+			}
+			
+		}
+		else
+		{
+			// Log details of the failure
+			NSLog(@"Error: %@ %@", error, [error userInfo]);
+		}
+	}];
+}
+
 
 + (void) DeleteMatchWithFileName:(NSString *)fileName
 {

@@ -21,4 +21,7 @@
 + (void) RefreshMatchesListWithNewData:(NSMutableArray *)matchesList;
 + (NSString *)pathForFileName:(NSString *)name;
 
++ (void) CreateParseObjectWithFileName:(NSString *)fileName matchData:(NSMutableDictionary *)matchData status:(NSString *)status;
++ (void) UpdateParseObjectWithFileName:(NSString *)fileName matchData:(NSMutableDictionary *)matchData status:(NSString *)status;
+
 @end

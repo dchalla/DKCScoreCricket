@@ -565,6 +565,7 @@
     }
     self.thisOverRuns.text = runsInOver;
     [DKCCreatePList CreatePlistDictionaryWithName:[self.MatchData objectForKey:@"FileName"] withData:self.MatchData];
+	[DKCCreatePList UpdateParseObjectWithFileName:[self.MatchData objectForKey:@"FileName"] matchData:self.MatchData status:@"current"];
     
     
 }
@@ -1166,6 +1167,7 @@
                 self.title = [NSString stringWithFormat:@"%@ Innings (Target: %d)",[[self.MatchData objectForKey:battingTeam] objectForKey:@"TeamName"],score+1];
                 self.MatchDataCopy = [self.MatchData mutableDeepCopy];
                 [DKCCreatePList CreatePlistDictionaryWithName:[self.MatchData objectForKey:@"FileName"] withData:self.MatchData];
+				[DKCCreatePList UpdateParseObjectWithFileName:[self.MatchData objectForKey:@"FileName"] matchData:self.MatchData status:@"current"];
             }
             else {
                 [DKCCreatePList CreatePlistDictionaryWithName:[self.MatchData objectForKey:@"FileName"] withData:self.MatchData];
@@ -1179,6 +1181,7 @@
                     }
                 }
                 [DKCCreatePList RefreshMatchesListWithNewData:listOfmatches];
+				[DKCCreatePList UpdateParseObjectWithFileName:[self.MatchData objectForKey:@"FileName"] matchData:self.MatchData status:@"completed"];
                 didEndInnings = YES;
                 [self showScoreBoard:nil];
             }

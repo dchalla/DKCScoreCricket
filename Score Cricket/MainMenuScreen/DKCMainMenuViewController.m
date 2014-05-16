@@ -8,6 +8,7 @@
 
 #import "DKCMainMenuViewController.h"
 #import "DKCListOfMatchesViewController.h"
+#import "DKCOnlineMatchesTableViewController.h"
 #import "DKCCreatePList.h"
 #import <QuartzCore/QuartzCore.h>
 #import "DKCReachability.h"
@@ -16,6 +17,8 @@
 #ifdef __APPLE__
 #include "TargetConditionals.h"
 #endif
+
+#import <Parse/Parse.h>
 
 @interface DKCMainMenuViewController (){
     UIViewController *controllerToPush;
@@ -71,6 +74,8 @@
     
     self.backgroundImageView.image = [self.backgroundImageView.image stackBlur:60];
     [self addMotionAffect];
+	
+	
 }
 
 - (void)addMotionAffect
@@ -149,8 +154,17 @@
     controllerToPush = (UIViewController *)controller;
     [self pathAnimationForType:2];
 }
+
+- (void)openOnlineMatches
+{
+	DKCOnlineMatchesTableViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"DKCOnlineMatchesTableViewController"];
+	controllerToPush = (UIViewController *)controller;
+    [self pathAnimationForType:3];
+}
 -(IBAction)CompletedMatchesWithAnimation:(id)sender
 {
+	[self openOnlineMatches];
+	return;
     DKCMatchesListCollectionViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"DKCMatchesListCollectionViewController"];
     controller.isCompleted = YES;
     controllerToPush = (UIViewController *)controller;

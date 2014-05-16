@@ -99,6 +99,7 @@
 		F961557C18A8A01F008FE4A9 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F961557B18A8A01F008FE4A9 /* AdSupport.framework */; };
 		F961557E18A8A02D008FE4A9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F961557D18A8A02D008FE4A9 /* CoreData.framework */; };
 		F961558018A8A045008FE4A9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F961557F18A8A045008FE4A9 /* libz.dylib */; };
+		F9C88BF91926C1A600196C94 /* DKCOnlineMatchesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C88BF81926C1A600196C94 /* DKCOnlineMatchesTableViewController.m */; };
 		F9E862E8190D96CB0015A003 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E862E7190D96CB0015A003 /* iAd.framework */; };
 		F9E862EE190DDA630015A003 /* DKCPlayerNameAutocompleteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E862EB190DDA630015A003 /* DKCPlayerNameAutocompleteManager.m */; };
 		F9E862EF190DDA630015A003 /* HTAutocompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E862ED190DDA630015A003 /* HTAutocompleteTextField.m */; };
@@ -106,6 +107,9 @@
 		F9E862F3190DE2E30015A003 /* autocompleteButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9E862F1190DE2E30015A003 /* autocompleteButton@2x.png */; };
 		F9E862F7190E07610015A003 /* PJTernarySearchTree.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E862F6190E07610015A003 /* PJTernarySearchTree.m */; };
 		F9E862FA190E07B80015A003 /* DKCPlayersDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E862F9190E07B80015A003 /* DKCPlayersDatasource.m */; };
+		F9FA39F819259115005EC30F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9FA39F719259115005EC30F /* Parse.framework */; };
+		F9FA39FA19259306005EC30F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9FA39F919259306005EC30F /* Security.framework */; };
+		F9FA39FC19259313005EC30F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9FA39FB19259313005EC30F /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -249,6 +253,8 @@
 		F961557B18A8A01F008FE4A9 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		F961557D18A8A02D008FE4A9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F961557F18A8A045008FE4A9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		F9C88BF71926C1A600196C94 /* DKCOnlineMatchesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCOnlineMatchesTableViewController.h; path = OnlineMatches/DKCOnlineMatchesTableViewController.h; sourceTree = "<group>"; };
+		F9C88BF81926C1A600196C94 /* DKCOnlineMatchesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCOnlineMatchesTableViewController.m; path = OnlineMatches/DKCOnlineMatchesTableViewController.m; sourceTree = "<group>"; };
 		F9E862E7190D96CB0015A003 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		F9E862EA190DDA630015A003 /* DKCPlayerNameAutocompleteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKCPlayerNameAutocompleteManager.h; sourceTree = "<group>"; };
 		F9E862EB190DDA630015A003 /* DKCPlayerNameAutocompleteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKCPlayerNameAutocompleteManager.m; sourceTree = "<group>"; };
@@ -260,6 +266,9 @@
 		F9E862F6190E07610015A003 /* PJTernarySearchTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJTernarySearchTree.m; sourceTree = "<group>"; };
 		F9E862F8190E07B80015A003 /* DKCPlayersDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCPlayersDatasource.h; path = Infrastructure/DKCPlayersDatasource.h; sourceTree = "<group>"; };
 		F9E862F9190E07B80015A003 /* DKCPlayersDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCPlayersDatasource.m; path = Infrastructure/DKCPlayersDatasource.m; sourceTree = "<group>"; };
+		F9FA39F719259115005EC30F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		F9FA39F919259306005EC30F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F9FA39FB19259313005EC30F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,16 +276,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE4F80C51730AB0700F08178 /* CFNetwork.framework in Frameworks */,
+				F9FA39FC19259313005EC30F /* MobileCoreServices.framework in Frameworks */,
+				F9FA39FA19259306005EC30F /* Security.framework in Frameworks */,
 				F9E862E8190D96CB0015A003 /* iAd.framework in Frameworks */,
 				F961558018A8A045008FE4A9 /* libz.dylib in Frameworks */,
 				1BEF77491787232100336878 /* SystemConfiguration.framework in Frameworks */,
 				F961557E18A8A02D008FE4A9 /* CoreData.framework in Frameworks */,
 				F961557C18A8A01F008FE4A9 /* AdSupport.framework in Frameworks */,
 				1BEF77471787228200336878 /* StoreKit.framework in Frameworks */,
+				F9FA39F819259115005EC30F /* Parse.framework in Frameworks */,
 				1B08302A176A3D4900D85392 /* CoreImage.framework in Frameworks */,
 				EE4F80C91730AB2500F08178 /* CoreLocation.framework in Frameworks */,
 				EE4F80C71730AB1300F08178 /* AudioToolbox.framework in Frameworks */,
-				EE4F80C51730AB0700F08178 /* CFNetwork.framework in Frameworks */,
 				EE82255F15856EE300D84530 /* MessageUI.framework in Frameworks */,
 				EEDCC2E815291B6F00A9952C /* QuartzCore.framework in Frameworks */,
 				EEDCC228151EBD2700A9952C /* UIKit.framework in Frameworks */,
@@ -375,6 +387,9 @@
 		EEDCC226151EBD2700A9952C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F9FA39FB19259313005EC30F /* MobileCoreServices.framework */,
+				F9FA39F919259306005EC30F /* Security.framework */,
+				F9FA39F719259115005EC30F /* Parse.framework */,
 				F9E862E7190D96CB0015A003 /* iAd.framework */,
 				F961557F18A8A045008FE4A9 /* libz.dylib */,
 				F961557D18A8A02D008FE4A9 /* CoreData.framework */,
@@ -395,6 +410,7 @@
 		EEDCC22D151EBD2700A9952C /* Score Cricket */ = {
 			isa = PBXGroup;
 			children = (
+				F9C88BF61926C12000196C94 /* OnlineMatches */,
 				F9E862F4190E07610015A003 /* PJTernarySearchTree */,
 				F9E862E9190DDA630015A003 /* HTTextField */,
 				F96154B018A89FD2008FE4A9 /* GoogleAnalyticsServicesiOS_3.03a */,
@@ -616,6 +632,15 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
+		F9C88BF61926C12000196C94 /* OnlineMatches */ = {
+			isa = PBXGroup;
+			children = (
+				F9C88BF71926C1A600196C94 /* DKCOnlineMatchesTableViewController.h */,
+				F9C88BF81926C1A600196C94 /* DKCOnlineMatchesTableViewController.m */,
+			);
+			name = OnlineMatches;
+			sourceTree = "<group>";
+		};
 		F9E862E9190DDA630015A003 /* HTTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -765,6 +790,7 @@
 				F9E862EF190DDA630015A003 /* HTAutocompleteTextField.m in Sources */,
 				EEDCC2DD1528F47700A9952C /* DKCScoringViewController.m in Sources */,
 				EEDCC2E51529155700A9952C /* UIButton+GradientColor.m in Sources */,
+				F9C88BF91926C1A600196C94 /* DKCOnlineMatchesTableViewController.m in Sources */,
 				EEFC2FCB153E4D28000E835A /* DKCSelectBowlerViewController.m in Sources */,
 				1BF1171717DA81EE004D7067 /* DKCDynamicCollectionViewFlowLayout.m in Sources */,
 				EEFC2FCF1540F660000E835A /* DKCAdditionalRunsViewController.m in Sources */,
@@ -864,9 +890,9 @@
 		EEDCC25A151EBD2800A9952C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Dinesh Challa (46TZ85ZB65)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dinesh Challa (46TZ85ZB65)";
-				FRAMEWORK_SEARCH_PATHS = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Dinesh Challa (8N5A6T7RGD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dinesh Challa (8N5A6T7RGD)";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Score Cricket/Score Cricket-Prefix.pch";
 				INFOPLIST_FILE = "Score Cricket/Score Cricket-Info.plist";
@@ -876,8 +902,8 @@
 					"\"$(SRCROOT)/Score Cricket/GoogleAnalyticsServicesiOS_3.03a\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "956A88E4-903B-4B60-AB92-88D588823D24";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "956A88E4-903B-4B60-AB92-88D588823D24";
+				PROVISIONING_PROFILE = "237D31F8-1B96-4AC9-A134-4335ADDBDC76";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "237D31F8-1B96-4AC9-A134-4335ADDBDC76";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
@@ -889,7 +915,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Dinesh Challa (46TZ85ZB65)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dinesh Challa (46TZ85ZB65)";
-				FRAMEWORK_SEARCH_PATHS = "";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Score Cricket/Score Cricket-Prefix.pch";
 				INFOPLIST_FILE = "Score Cricket/Score Cricket-Info.plist";
