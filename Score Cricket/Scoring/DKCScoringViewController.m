@@ -9,7 +9,9 @@
 #import "DKCScoringViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "DKCCReatePlist.h"
-#import "UIImage+StackBlur.h"
+#import "UIImage+ImageEffects.h"
+#import "DKCBackgroundImage.h"
+#import "DKCMainMenuViewController.h"
 
 
 @interface DKCScoringViewController ()
@@ -146,7 +148,7 @@
     head = 0;
     maxUndo = 25;
     
-    self.backgroundImageView.image = [self.backgroundImageView.image stackBlur:60];
+    self.backgroundImageView.image = [DKCBackgroundImage backgroundImage];
     [self addMotionAffect];
 	//[self letterPresseAddectToLabel:self.scoreCricket];
     
@@ -283,7 +285,16 @@
     [super viewDidAppear:animated];
     if(didEndInnings)
     {
-        [self.navigationController popViewControllerAnimated:YES];
+        //[self.navigationController popViewControllerAnimated:YES];
+		NSArray *viewControllers = [[self navigationController] viewControllers];
+		for( int i=0;i<[viewControllers count];i++){
+			id obj=[viewControllers objectAtIndex:i];
+			if([obj isKindOfClass:[DKCMainMenuViewController class]]){
+				[[self navigationController] popToViewController:obj animated:YES];
+				return;
+			}
+		}
+		[self.navigationController popToRootViewControllerAnimated:YES];
         return;
     }
 }
@@ -318,6 +329,11 @@
     UINavigationController *tempNavController = [[UINavigationController alloc] initWithRootViewController:editTeam];
     tempNavController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
     tempNavController.navigationItem.rightBarButtonItem = UIBarButtonSystemItemDone;
+	UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, YES, 3);
+	[self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+	UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	editTeam.backgroundBlurredImage = [DKCBackgroundImage backgroundImageWithImage:img];
     [self presentModalViewController:tempNavController animated:YES];
 }
 
@@ -1127,6 +1143,12 @@
     DKCAdditionalRunsViewController *tempAddRuns = [self.storyboard instantiateViewControllerWithIdentifier:@"AdditionalRunsViewController"];
     tempAddRuns.delegate=self;
     tempAddRuns.ExtraType = ExtraType;
+	UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, YES, 3);
+	[self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+	UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	tempAddRuns.backgroundBlurImage = [DKCBackgroundImage backgroundImageWithImage:img];
+
     [self presentModalViewController:tempAddRuns animated:YES];
     
 }
@@ -1234,6 +1256,11 @@
     outViewController.who = [self.MatchData objectForKey:battingTeam];
     outViewController.onStrike = [[self.MatchData objectForKey:currentInnings] objectForKey:@"OnStrike"];
     outViewController.runnersEnd = [[self.MatchData objectForKey:currentInnings] objectForKey:@"RunnersEnd"];
+	UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, YES, 3);
+	[self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+	UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	outViewController.backgroundBlurImage = [DKCBackgroundImage backgroundImageWithImage:img];
     if (FromExtra) 
     {
         outViewController.isFromExtras = YES;
@@ -1279,6 +1306,11 @@
     NSString *bowlingTeam = [[self.MatchData objectForKey:currentInnings] objectForKey:@"BowlingTeam"];
     selectBowler.bowlers = [self.MatchData objectForKey:bowlingTeam];
     selectBowler.currentBowler = [[self.MatchData objectForKey:currentInnings] objectForKey:@"Bowler"];
+	UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, YES, 3);
+	[self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+	UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	selectBowler.backgroundBlurImage = [DKCBackgroundImage backgroundImageWithImage:img];
     [self presentModalViewController:selectBowler animated:YES];
 }
 
@@ -1341,7 +1373,11 @@
         selectBatsman.changeBatsman = TRUE;
         
         selectBatsman.forBatsmanChange = oldBatsman;
-        
+        UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, YES, 3);
+		[self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+		UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+		UIGraphicsEndImageContext();
+		selectBatsman.backgroundBlurImage = [DKCBackgroundImage backgroundImageWithImage:img];
         [self presentModalViewController:selectBatsman animated:YES];
     }
     
@@ -1399,7 +1435,11 @@
         selectBatsman.changeBatsman = FALSE;
         
         selectBatsman.forBatsmanChange = oldBatsman;
-        
+        UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, YES, 3);
+		[self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+		UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+		UIGraphicsEndImageContext();
+		selectBatsman.backgroundBlurImage = [DKCBackgroundImage backgroundImageWithImage:img];
         [self presentModalViewController:selectBatsman animated:YES];
     }
     

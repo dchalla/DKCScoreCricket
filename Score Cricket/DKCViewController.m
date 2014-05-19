@@ -47,13 +47,13 @@
     {
         ballPosition2 = CGRectMake(139, 179, 15, 15);
         ballposition3= CGRectMake(147, 206, 15, 15);
-        ballposition4= CGRectMake(147, 206, 305, 305);
+        ballposition4= CGRectMake(self.view.frame.size.width, 216, 305, 305);
     }
     else
     {
         ballPosition2 = CGRectMake(139, 206, 15, 15);
         ballposition3= CGRectMake(147, 246, 15, 15);
-        ballposition4= CGRectMake(147, 246, 305, 305);
+        ballposition4= CGRectMake(self.view.frame.size.width, 256, 305, 305);
     }
     
     [UIView animateWithDuration:0.0
@@ -97,13 +97,18 @@
                                                                                              
                                                                                          }
                                                                                                          completion:^(BOOL finished) {
+																											 UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, YES, 3);
+																											 [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+																											 UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+																											 UIGraphicsEndImageContext();
                                                                                                              DKCMainMenuViewController *mainMenu = [self.storyboard instantiateViewControllerWithIdentifier:@"MainMenuViewController"];
-                                                                                                             [UIView  beginAnimations:nil context:NULL];
+																											 mainMenu.backgroundInitialImage = img;
+                                                                                                          /*   [UIView  beginAnimations:nil context:NULL];
                                                                                                              [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-                                                                                                             [UIView setAnimationDuration:0.75];
+                                                                                                             [UIView setAnimationDuration:0.75];*/
                                                                                                              [self.navigationController pushViewController:mainMenu animated:NO];
-                                                                                                             [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
-                                                                                                             [UIView commitAnimations];
+                                                                                                         /*    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
+                                                                                                             [UIView commitAnimations];*/
                                                                                                              self.BallImageView.alpha=0.0;
                                                                                                              self.BallImageView.frame=CGRectMake(228, 68, 15, 15);
                                                                                                              [self.BallImageView makeRoundedCorner:7.5];

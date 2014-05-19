@@ -12,6 +12,7 @@
 #import <MessageUI/MessageUI.h>
 #import "DKCScoreCardHeaderView.h"
 #import "GAITrackedViewController.h"
+#import <Parse/Parse.h>
 
 @interface DKCScoreCardViewController : GAITrackedViewController <MFMailComposeViewControllerDelegate,UIActionSheetDelegate, UITableViewDataSource, UITableViewDelegate>
 
@@ -24,4 +25,5 @@
 @property (nonatomic, strong) DKCScoreCardHeaderView *headerView;
 @property (nonatomic, strong) UIView *disabledView;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (nonatomic)BOOL isLive;
 @end

@@ -100,6 +100,17 @@
 		F961557E18A8A02D008FE4A9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F961557D18A8A02D008FE4A9 /* CoreData.framework */; };
 		F961558018A8A045008FE4A9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F961557F18A8A045008FE4A9 /* libz.dylib */; };
 		F9C88BF91926C1A600196C94 /* DKCOnlineMatchesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C88BF81926C1A600196C94 /* DKCOnlineMatchesTableViewController.m */; };
+		F9C88BFD1927178900196C94 /* DKCScoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C88BFB1927178900196C94 /* DKCScoreTableViewCell.m */; };
+		F9C88BFE1927178900196C94 /* DKCScoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9C88BFC1927178900196C94 /* DKCScoreTableViewCell.xib */; };
+		F9C88C0419273D7600196C94 /* DIDatepicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C88C0119273D7600196C94 /* DIDatepicker.m */; };
+		F9C88C0519273D7600196C94 /* DIDatepickerDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C88C0319273D7600196C94 /* DIDatepickerDateView.m */; };
+		F9C88C0A1927C34300196C94 /* AMBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C88C071927C34300196C94 /* AMBlurView.m */; };
+		F9C88C0B1927C34300196C94 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C88C091927C34300196C94 /* UIImage+ImageEffects.m */; };
+		F9C88C0D1927C44D00196C94 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C88C0C1927C44D00196C94 /* Accelerate.framework */; };
+		F9C88C101927C77100196C94 /* DKCBackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C88C0F1927C77100196C94 /* DKCBackgroundImage.m */; };
+		F9C88C13192914D300196C94 /* Default-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = F9C88C11192914D300196C94 /* Default-568h.png */; };
+		F9C88C14192914D400196C94 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9C88C12192914D300196C94 /* Default@2x.png */; };
+		F9C88C181929310300196C94 /* BOZPongRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C88C171929310300196C94 /* BOZPongRefreshControl.m */; };
 		F9E862E8190D96CB0015A003 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E862E7190D96CB0015A003 /* iAd.framework */; };
 		F9E862EE190DDA630015A003 /* DKCPlayerNameAutocompleteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E862EB190DDA630015A003 /* DKCPlayerNameAutocompleteManager.m */; };
 		F9E862EF190DDA630015A003 /* HTAutocompleteTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E862ED190DDA630015A003 /* HTAutocompleteTextField.m */; };
@@ -255,6 +266,24 @@
 		F961557F18A8A045008FE4A9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		F9C88BF71926C1A600196C94 /* DKCOnlineMatchesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCOnlineMatchesTableViewController.h; path = OnlineMatches/DKCOnlineMatchesTableViewController.h; sourceTree = "<group>"; };
 		F9C88BF81926C1A600196C94 /* DKCOnlineMatchesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCOnlineMatchesTableViewController.m; path = OnlineMatches/DKCOnlineMatchesTableViewController.m; sourceTree = "<group>"; };
+		F9C88BFA1927178900196C94 /* DKCScoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCScoreTableViewCell.h; path = OnlineMatches/DKCScoreTableViewCell.h; sourceTree = "<group>"; };
+		F9C88BFB1927178900196C94 /* DKCScoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCScoreTableViewCell.m; path = OnlineMatches/DKCScoreTableViewCell.m; sourceTree = "<group>"; };
+		F9C88BFC1927178900196C94 /* DKCScoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DKCScoreTableViewCell.xib; path = OnlineMatches/DKCScoreTableViewCell.xib; sourceTree = "<group>"; };
+		F9C88C0019273D7600196C94 /* DIDatepicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepicker.h; sourceTree = "<group>"; };
+		F9C88C0119273D7600196C94 /* DIDatepicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepicker.m; sourceTree = "<group>"; };
+		F9C88C0219273D7600196C94 /* DIDatepickerDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepickerDateView.h; sourceTree = "<group>"; };
+		F9C88C0319273D7600196C94 /* DIDatepickerDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepickerDateView.m; sourceTree = "<group>"; };
+		F9C88C061927C34300196C94 /* AMBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMBlurView.h; path = Infrastructure/AMBlurView.h; sourceTree = "<group>"; };
+		F9C88C071927C34300196C94 /* AMBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMBlurView.m; path = Infrastructure/AMBlurView.m; sourceTree = "<group>"; };
+		F9C88C081927C34300196C94 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+ImageEffects.h"; path = "Infrastructure/UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		F9C88C091927C34300196C94 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ImageEffects.m"; path = "Infrastructure/UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		F9C88C0C1927C44D00196C94 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		F9C88C0E1927C77100196C94 /* DKCBackgroundImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCBackgroundImage.h; path = Infrastructure/DKCBackgroundImage.h; sourceTree = "<group>"; };
+		F9C88C0F1927C77100196C94 /* DKCBackgroundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCBackgroundImage.m; path = Infrastructure/DKCBackgroundImage.m; sourceTree = "<group>"; };
+		F9C88C11192914D300196C94 /* Default-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h.png"; sourceTree = "<group>"; };
+		F9C88C12192914D300196C94 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		F9C88C161929310300196C94 /* BOZPongRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOZPongRefreshControl.h; sourceTree = "<group>"; };
+		F9C88C171929310300196C94 /* BOZPongRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BOZPongRefreshControl.m; sourceTree = "<group>"; };
 		F9E862E7190D96CB0015A003 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		F9E862EA190DDA630015A003 /* DKCPlayerNameAutocompleteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKCPlayerNameAutocompleteManager.h; sourceTree = "<group>"; };
 		F9E862EB190DDA630015A003 /* DKCPlayerNameAutocompleteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKCPlayerNameAutocompleteManager.m; sourceTree = "<group>"; };
@@ -276,6 +305,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9C88C0D1927C44D00196C94 /* Accelerate.framework in Frameworks */,
 				EE4F80C51730AB0700F08178 /* CFNetwork.framework in Frameworks */,
 				F9FA39FC19259313005EC30F /* MobileCoreServices.framework in Frameworks */,
 				F9FA39FA19259306005EC30F /* Security.framework in Frameworks */,
@@ -304,6 +334,8 @@
 		1B09175D17BE844E00F8AC2A /* AppIcon */ = {
 			isa = PBXGroup;
 			children = (
+				F9C88C11192914D300196C94 /* Default-568h.png */,
+				F9C88C12192914D300196C94 /* Default@2x.png */,
 				1BACAC4217EA5B9000C61896 /* Default-568h@2x.png */,
 				1BACAC4317EA5B9000C61896 /* Default.png */,
 				1BACAC4417EA5B9000C61896 /* Default~iphone.png */,
@@ -387,6 +419,7 @@
 		EEDCC226151EBD2700A9952C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F9C88C0C1927C44D00196C94 /* Accelerate.framework */,
 				F9FA39FB19259313005EC30F /* MobileCoreServices.framework */,
 				F9FA39F919259306005EC30F /* Security.framework */,
 				F9FA39F719259115005EC30F /* Parse.framework */,
@@ -410,6 +443,8 @@
 		EEDCC22D151EBD2700A9952C /* Score Cricket */ = {
 			isa = PBXGroup;
 			children = (
+				F9C88C151929310300196C94 /* BOZPongRefreshControl */,
+				F9C88BFF19273D7600196C94 /* DatePicker */,
 				F9C88BF61926C12000196C94 /* OnlineMatches */,
 				F9E862F4190E07610015A003 /* PJTernarySearchTree */,
 				F9E862E9190DDA630015A003 /* HTTextField */,
@@ -519,6 +554,10 @@
 		EEDCC276151F0F2A00A9952C /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				F9C88C061927C34300196C94 /* AMBlurView.h */,
+				F9C88C071927C34300196C94 /* AMBlurView.m */,
+				F9C88C081927C34300196C94 /* UIImage+ImageEffects.h */,
+				F9C88C091927C34300196C94 /* UIImage+ImageEffects.m */,
 				1B7B02BA17BE8A6000AE8F87 /* UIImage+StackBlur.h */,
 				1B7B02BB17BE8A6000AE8F87 /* UIImage+StackBlur.m */,
 				1BEF77511787496100336878 /* Reachability.h */,
@@ -535,6 +574,8 @@
 				1BEF775517874B1B00336878 /* DKCReachability.m */,
 				F9E862F8190E07B80015A003 /* DKCPlayersDatasource.h */,
 				F9E862F9190E07B80015A003 /* DKCPlayersDatasource.m */,
+				F9C88C0E1927C77100196C94 /* DKCBackgroundImage.h */,
+				F9C88C0F1927C77100196C94 /* DKCBackgroundImage.m */,
 			);
 			name = Infrastructure;
 			sourceTree = "<group>";
@@ -637,8 +678,31 @@
 			children = (
 				F9C88BF71926C1A600196C94 /* DKCOnlineMatchesTableViewController.h */,
 				F9C88BF81926C1A600196C94 /* DKCOnlineMatchesTableViewController.m */,
+				F9C88BFA1927178900196C94 /* DKCScoreTableViewCell.h */,
+				F9C88BFB1927178900196C94 /* DKCScoreTableViewCell.m */,
+				F9C88BFC1927178900196C94 /* DKCScoreTableViewCell.xib */,
 			);
 			name = OnlineMatches;
+			sourceTree = "<group>";
+		};
+		F9C88BFF19273D7600196C94 /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				F9C88C0019273D7600196C94 /* DIDatepicker.h */,
+				F9C88C0119273D7600196C94 /* DIDatepicker.m */,
+				F9C88C0219273D7600196C94 /* DIDatepickerDateView.h */,
+				F9C88C0319273D7600196C94 /* DIDatepickerDateView.m */,
+			);
+			path = DatePicker;
+			sourceTree = "<group>";
+		};
+		F9C88C151929310300196C94 /* BOZPongRefreshControl */ = {
+			isa = PBXGroup;
+			children = (
+				F9C88C161929310300196C94 /* BOZPongRefreshControl.h */,
+				F9C88C171929310300196C94 /* BOZPongRefreshControl.m */,
+			);
+			path = BOZPongRefreshControl;
 			sourceTree = "<group>";
 		};
 		F9E862E9190DDA630015A003 /* HTTextField */ = {
@@ -723,9 +787,11 @@
 				EEDCC29F1522A43E00A9952C /* MainStoryboard_iPhone.storyboard in Resources */,
 				EEDCC2A81522A5E700A9952C /* Ball.JPG in Resources */,
 				EEDCC2AA1522A5E700A9952C /* BottomCurve.png in Resources */,
+				F9C88BFE1927178900196C94 /* DKCScoreTableViewCell.xib in Resources */,
 				EEDCC2AC1522A5E700A9952C /* greenBackground.jpg in Resources */,
 				F961554718A89FD2008FE4A9 /* Readme.txt in Resources */,
 				EEDCC2AE1522A5E700A9952C /* ScoreCricketOpening.jpg in Resources */,
+				F9C88C13192914D300196C94 /* Default-568h.png in Resources */,
 				EEDCC2B01522A5E700A9952C /* ScoreCricketOpeningDark.jpg in Resources */,
 				EEDCC2B21522A5E700A9952C /* ScoreCricketOpeningDarkGreen.png in Resources */,
 				EEDCC2B41522A5E700A9952C /* TopCurve.png in Resources */,
@@ -752,6 +818,7 @@
 				F961554818A89FD2008FE4A9 /* Changelog.txt in Resources */,
 				1BC7366C173AF7D200AB3941 /* hands.png in Resources */,
 				1BC7367F173C1DD000AB3941 /* handsButton.png in Resources */,
+				F9C88C14192914D400196C94 /* Default@2x.png in Resources */,
 				1BACAC4717EA5B9000C61896 /* Default~iphone.png in Resources */,
 				1BC73680173C1DD000AB3941 /* handsButton@2x.png in Resources */,
 				1B09176817BE846700F8AC2A /* Icon-72.png in Resources */,
@@ -783,9 +850,11 @@
 				EEDCC238151EBD2700A9952C /* DKCAppDelegate.m in Sources */,
 				EEDCC241151EBD2700A9952C /* DKCViewController.m in Sources */,
 				EEDCC270151F007B00A9952C /* DKCMainMenuViewController.m in Sources */,
+				F9C88C101927C77100196C94 /* DKCBackgroundImage.m in Sources */,
 				EEDCC279151F0F8600A9952C /* UIView+UIView_RoundCorner.m in Sources */,
 				EEDCC2BC1522D9EB00A9952C /* DKCCreateMatchViewController.m in Sources */,
 				EEDCC2CD15279A7500A9952C /* DKCEditTeamViewController.m in Sources */,
+				F9C88C181929310300196C94 /* BOZPongRefreshControl.m in Sources */,
 				EEDCC2D41527B2CD00A9952C /* DKCEditTeamCell.m in Sources */,
 				F9E862EF190DDA630015A003 /* HTAutocompleteTextField.m in Sources */,
 				EEDCC2DD1528F47700A9952C /* DKCScoringViewController.m in Sources */,
@@ -793,9 +862,12 @@
 				F9C88BF91926C1A600196C94 /* DKCOnlineMatchesTableViewController.m in Sources */,
 				EEFC2FCB153E4D28000E835A /* DKCSelectBowlerViewController.m in Sources */,
 				1BF1171717DA81EE004D7067 /* DKCDynamicCollectionViewFlowLayout.m in Sources */,
+				F9C88C0B1927C34300196C94 /* UIImage+ImageEffects.m in Sources */,
 				EEFC2FCF1540F660000E835A /* DKCAdditionalRunsViewController.m in Sources */,
 				EEDE84BF15521C41005BD509 /* DKCOutViewController.m in Sources */,
 				EEDE84C2155599C8005BD509 /* DKCSelectBatsmanViewController.m in Sources */,
+				F9C88C0519273D7600196C94 /* DIDatepickerDateView.m in Sources */,
+				F9C88BFD1927178900196C94 /* DKCScoreTableViewCell.m in Sources */,
 				EED9013B1563689300896F18 /* NSDictionary+MutableDeepCopy.m in Sources */,
 				EED901431565F15800896F18 /* DKCScoreCardViewController.m in Sources */,
 				EE842DF315727C24006074DF /* DKCScoreCardBattingTableViewCell.m in Sources */,
@@ -804,7 +876,9 @@
 				F9E862F7190E07610015A003 /* PJTernarySearchTree.m in Sources */,
 				EE842DF715770AD3006074DF /* DKCScoreCordBowlingTableViewCell.m in Sources */,
 				EE8225631585830A00D84530 /* DKCScoreCardHeaderView.m in Sources */,
+				F9C88C0419273D7600196C94 /* DIDatepicker.m in Sources */,
 				EE82256C15882E9600D84530 /* DKCCreatePList.m in Sources */,
+				F9C88C0A1927C34300196C94 /* AMBlurView.m in Sources */,
 				F9E862FA190E07B80015A003 /* DKCPlayersDatasource.m in Sources */,
 				1BF1171417DA7105004D7067 /* DKCMatchesListCollectionViewCell.m in Sources */,
 				EE82257015898FD200D84530 /* DKCListOfMatchesViewController.m in Sources */,

@@ -73,6 +73,7 @@
     
     [self.pickerView reloadAllComponents];
     [self addMotionAffect];
+	self.backgroundImageView.image = _backgroundBlurImage;
 }
 
 - (void)addMotionAffect

@@ -19,17 +19,21 @@
 #endif
 
 #import <Parse/Parse.h>
+#import "DKCBackgroundImage.h"
+#import "DKCScoreTableViewCell.h"
+#import "AMBlurView.h"
 
 @interface DKCMainMenuViewController (){
     UIViewController *controllerToPush;
     UIView *animatedView;
+	NSIndexPath *_cellIndexPath;
 }
+
+@property (nonatomic, strong) UITableView *tableView;
 
 @end
 
 @implementation DKCMainMenuViewController
-@synthesize BottomCurve;
-@synthesize TopCurve;
 @synthesize CreateMatch;
 @synthesize InProgressMatch;
 @synthesize CompletedMatches;
@@ -51,9 +55,8 @@
 {
     [super viewDidLoad];
 	self.screenName = @"Main Menu Screen";
+	self.backgroundImageView.image = [DKCBackgroundImage backgroundImage];
 	
-    self.TopCurve.alpha=0.8;
-    self.BottomCurve.alpha=0.9;
     [self.CompletedMatches makeRoundedCorner:35];
     [self.CreateMatch makeRoundedCorner:35];
     [self.InProgressMatch makeRoundedCorner:35];
@@ -71,11 +74,26 @@
     UITapGestureRecognizer *completedMatchesGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(CompletedMatchesWithAnimation:)];
     self.CompletedMatchesLabel.gestureRecognizers = [NSArray arrayWithObject:completedMatchesGesture];
 	// Do any additional setup after loading the view.
-    
-    self.backgroundImageView.image = [self.backgroundImageView.image stackBlur:60];
-    [self addMotionAffect];
 	
+	[self addMotionAffect];
 	
+	self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 280, self.view.bounds.size.width + 120, self.view.frame.size.height)];
+	[self.view addSubview:self.tableView];
+	self.tableView.delegate = self;
+	self.tableView.dataSource = self;
+	self.tableView.backgroundColor = [UIColor clearColor];
+	self.tableView.transform = CGAffineTransformMakeRotation(-M_PI * 15/180);
+	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+	
+	self.CreateMatch.alpha=0;
+    self.CompletedMatches.alpha=0;
+    self.InProgressMatch.alpha=0;
+	self.CreateMatchLabel.alpha = 0;
+	self.EditMatchLabel.alpha = 0;
+	self.CompletedMatchesLabel.alpha = 0;
+	self.tableView.alpha = 0;
+	self.backgroundImageView.alpha = 0;
+	self.backgroundInitialImageView.image = self.backgroundInitialImage;
 }
 
 - (void)addMotionAffect
@@ -107,33 +125,27 @@
 {
 	[super viewWillAppear:animated];
     self.navigationController.navigationBarHidden=YES;
-    self.TopCurve.frame=CGRectMake(0, 0, self.view.frame.size.width, (self.view.frame.size.height/2) + 30);
-    self.BottomCurve.frame=CGRectMake(0, (self.view.frame.size.height/2) - 30, self.view.frame.size.width, (self.view.frame.size.height/2) + 30);
-    self.CreateMatch.alpha=0;
-    self.CompletedMatches.alpha=0;
-    self.InProgressMatch.alpha=0;
+    
     
     self.Bat.transform=CGAffineTransformMakeRotation(M_PI_2/2+M_PI_2/10);
     
 }
 
--(void)viewDidAppear:(BOOL)animated
+- (void)viewDidAppear:(BOOL)animated
 {
 	[super viewDidAppear:animated];
-    [UIView animateWithDuration:0.3
-                          delay:0
-                        options:UIViewAnimationOptionCurveLinear
-                     animations:^{
-                         self.TopCurve.frame=CGRectMake(0, -((self.view.frame.size.height/2) + 15), self.view.frame.size.width, (self.view.frame.size.height/2) + 15);
-                         self.BottomCurve.frame=CGRectMake(0, self.view.frame.size.height - 100, self.view.frame.size.width, 255);
-                         self.CreateMatch.alpha=1;
-                         self.CompletedMatches.alpha=1;
-                         self.InProgressMatch.alpha=1;
-                         
-                     }
-                     completion:nil];
-    
+	[UIView animateWithDuration:0.6 animations:^{
+		self.CreateMatch.alpha=1;
+		self.CompletedMatches.alpha=1;
+		self.CreateMatchLabel.alpha = 1;
+		self.EditMatchLabel.alpha = 1;
+		self.CompletedMatchesLabel.alpha = 1;
+		self.InProgressMatch.alpha=1;
+		self.tableView.alpha = 1;
+		self.backgroundImageView.alpha = 1;
+	}];
 }
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -158,13 +170,18 @@
 - (void)openOnlineMatches
 {
 	DKCOnlineMatchesTableViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"DKCOnlineMatchesTableViewController"];
-	controllerToPush = (UIViewController *)controller;
-    [self pathAnimationForType:3];
+	if (_cellIndexPath.row == 0)
+	{
+		controller.isLive = YES;
+	}
+	else
+	{
+		controller.isLive = NO;
+	}
+	[self.navigationController pushViewController:controller animated:YES];
 }
 -(IBAction)CompletedMatchesWithAnimation:(id)sender
 {
-	[self openOnlineMatches];
-	return;
     DKCMatchesListCollectionViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"DKCMatchesListCollectionViewController"];
     controller.isCompleted = YES;
     controllerToPush = (UIViewController *)controller;
@@ -235,19 +252,211 @@
     [tempView.layer addAnimation:theGroup forKey:@"BallPath"];
 }
 
-/**
- Animation delegate method called when the animation's finished: restore the transform and reenable user interaction.
- */
-- (void)animationDidStop:(CAAnimation *)theAnimation finished:(BOOL)flag {
-    [animatedView.layer removeAnimationForKey:@"BallPath"];
-    self.view.userInteractionEnabled = YES;
-	[UIView  beginAnimations:nil context:NULL];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    [UIView setAnimationDuration:0.75];
-    [self.navigationController pushViewController:controllerToPush animated:NO];
-    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:self.navigationController.view cache:NO];
-    [UIView commitAnimations];
+
+
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return 1;
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+	return 30;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+	UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 30)];
+	backgroundView.backgroundColor = [UIColor clearColor];
+	UIView *blurView = [UIView new];
+	blurView.frame = CGRectMake(0, 0, tableView.frame.size.width, 25);
+	blurView.backgroundColor =  [UIColor colorWithRed:0 green:0 blue:0 alpha:0.7];
+	blurView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+	UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(80, 0, blurView.frame.size.width - 2*60, blurView.frame.size.height)];
+	[blurView addSubview:label];
+	label.textColor = [UIColor colorWithWhite:0.7 alpha:1];
+	label.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:10];
+	if (section == 0)
+	{
+		label.text = @"Follow matches around the world";
+	}
+	else
+	{
+		label.text = @"Score a match";
+	}
+	
+	[backgroundView addSubview:blurView];
+	return backgroundView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+	return 200;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+	UIView *backgroundView = [[UIView alloc] init];
+	backgroundView.backgroundColor = [UIColor clearColor];
+	
+	UIView *blurView = [UIView new];
+	blurView.backgroundColor =  [UIColor colorWithRed:0 green:0 blue:0 alpha:0.7];
+	blurView.frame = CGRectMake(0, 0, tableView.frame.size.width, 400);
+	[backgroundView addSubview:blurView];
+	return backgroundView;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+	if (section == 0)
+	{
+		return 2;
+	}
+	else
+	{
+		return 3;
+	}
+    
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 50;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"ScoreCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	if (!cell)
+	{
+		cell = [[UITableViewCell alloc] init];
+		cell.clipsToBounds = YES;
+		cell.backgroundColor = [UIColor clearColor];
+		cell.contentView.backgroundColor = [UIColor clearColor];
+		cell.textLabel.backgroundColor = [UIColor clearColor];
+		cell.textLabel.textColor = [UIColor whiteColor];
+		cell.textLabel.frame = CGRectMake(80, cell.textLabel.frame.origin.y, cell.textLabel.frame.size.width - 2*60, cell.textLabel.frame.size.height);
+		cell.selectionStyle = UITableViewCellSelectionStyleNone;
+		UIView *blurView = [UIView new];
+		blurView.frame = cell.frame;
+		blurView.backgroundColor =  [UIColor colorWithRed:0 green:0 blue:0 alpha:0.7];
+		blurView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+		[cell insertSubview:blurView belowSubview:cell.backgroundView];
+	}
+	UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(80, 0, cell.frame.size.width - 2*60, cell.frame.size.height)];
+	[cell addSubview:label];
+	label.textColor = [UIColor whiteColor];
+	label.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:16];
+	if (indexPath.row == 0)
+	{
+		label.text = @"Live Scores";
+	}
+	else if (indexPath.row == 1)
+	{
+		label.text = @"Results";
+	}
+    
+	
+    return cell;
+}
+
+#pragma mark - Table view delegate
+#define delay 0.1
+#define animationDuration 1
+#define animationAmplitude 5
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = (UITableViewCell *) [tableView cellForRowAtIndexPath:indexPath];
+    if (cell.frame.size.width != self.view.frame.size.width)
+    {
+        //return;
+    }
+    _cellIndexPath = indexPath;
+    [self bounceView:cell amplitude:animationAmplitude duration:animationDuration delegate:YES];
+    for (int i =1; i<=4; i++)
+    {
+        if (indexPath.row - i >= 0)
+        {
+            UITableViewCell *tempCell = (UITableViewCell *) [tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:indexPath.row - i inSection:0]];
+            if (tempCell)
+            {
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, delay * (i + 1) * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+                    CGFloat modifier = 1 / (1.f * i + 1);
+                    modifier = powf(modifier, i);
+                    CGFloat subAmplitude = animationAmplitude * modifier;
+                    [self bounceView:tempCell amplitude:subAmplitude duration:animationDuration delegate:NO];
+                });
+            }
+        }
+	}
+    
+}
+
+#define DEGREES(rads) rads * M_PI / 180.f
+- (void)bounceView:(UIView *)view amplitude:(CGFloat)amplitude duration:(CGFloat)duration delegate:(BOOL)getDelegateCall {
+    CGRect tempFrame = view.frame;
+    tempFrame.size.width = (self.view.frame.size.width + 120) * 2;
+    view.frame = tempFrame;
+    CGFloat m34 = 1 / 50.f* (view.layer.anchorPoint.x == 0 ? -1 : 1);
+    CGFloat bounceAngleModifiers[] = {1, 0.33f, 0.13f};
+    NSInteger bouncesCount = sizeof(bounceAngleModifiers) / sizeof(CGFloat);
+    bouncesCount = bouncesCount * 2 + 1;
+    
+    CATransform3D transform = CATransform3DIdentity;
+    transform.m34 = m34;
+    view.layer.transform = transform;
+    
+    CAKeyframeAnimation *bounceKeyframe = [CAKeyframeAnimation animationWithKeyPath:@"transform.rotation.y"];
+    bounceKeyframe.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    bounceKeyframe.duration = duration;
+    
+    NSMutableArray *bounceValues = [NSMutableArray array];
+    for (NSInteger i = 0; i < bouncesCount; i++) {
+        CGFloat angle = 0;
+        if (i % 2 > 0) {
+            angle = bounceAngleModifiers[i / 2] * amplitude;
+        }
+        [bounceValues addObject:@(DEGREES(angle))];
+    }
+    bounceKeyframe.values = bounceValues;
+    if (getDelegateCall)
+    {
+        bounceKeyframe.delegate = self;
+    }
+    
+    [view.layer setValue:@(0) forKeyPath:bounceKeyframe.keyPath];
+    [view.layer addAnimation:bounceKeyframe forKey:nil];
+}
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
+{
+	if ([anim isKindOfClass:[CAKeyframeAnimation class]])
+	{
+		UITableViewCell *cell = (UITableViewCell *) [self.tableView cellForRowAtIndexPath:_cellIndexPath];
+		CGRect tempFrame = cell.frame;
+		tempFrame.size.width = (self.view.frame.size.width + 120);
+		cell.frame = tempFrame;
+		[self openOnlineMatches];
+	}
+	else
+	{
+		[animatedView.layer removeAnimationForKey:@"BallPath"];
+		self.view.userInteractionEnabled = YES;
+		
+		[self.navigationController pushViewController:controllerToPush animated:YES];
+		
+	}
+}
+ 
+
 
 
 @end

@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DKCOnlineMatchesTableViewController : UITableViewController
+@property (nonatomic) BOOL isLive;
 
 @end

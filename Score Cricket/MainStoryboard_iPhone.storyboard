@@ -182,6 +182,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="3LE-gU-aM8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="blue_background.png" id="3uT-Tr-Z7l">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,14 +252,6 @@
                                     <action selector="CompletedMatchesWithAnimation:" destination="egL-kc-H5I" eventType="touchUpInside" id="q8o-pS-6Ve"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="TopCurve.png" id="bOH-OH-xEw">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="255"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="BottomCurve.png" id="HvX-AS-fXh">
-                                <rect key="frame" x="0.0" y="207" width="320" height="255"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -263,15 +259,14 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="Bat" destination="C7f-Ar-4Re" id="DOw-qJ-6Ld"/>
-                        <outlet property="BottomCurve" destination="HvX-AS-fXh" id="mkO-TL-PCM"/>
                         <outlet property="CompletedMatches" destination="7bF-ou-P6X" id="5sb-i1-JL7"/>
                         <outlet property="CompletedMatchesLabel" destination="E2Y-WU-l1T" id="T2M-tI-2f6"/>
                         <outlet property="CreateMatch" destination="Mbo-iS-mKk" id="b5X-97-HkS"/>
                         <outlet property="CreateMatchLabel" destination="bbi-ra-qxH" id="5Q7-gt-QG3"/>
                         <outlet property="EditMatchLabel" destination="nFN-YT-TIP" id="qgC-xB-SKN"/>
                         <outlet property="InProgressMatch" destination="EdT-hD-Y6v" id="4Zy-AQ-xo8"/>
-                        <outlet property="TopCurve" destination="bOH-OH-xEw" id="Zgm-X8-r8v"/>
                         <outlet property="backgroundImageView" destination="3uT-Tr-Z7l" id="WXI-7A-gjB"/>
+                        <outlet property="backgroundInitialImageView" destination="3LE-gU-aM8" id="CUr-dy-GYk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7LH-OJ-tsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1209,9 +1204,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="rMk-gB-OYK">
-                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <inset key="contentInset" minX="0.0" minY="64" maxX="0.0" maxY="0.0"/>
                                 <connections>
                                     <outlet property="dataSource" destination="oQ0-PE-4h4" id="WC5-0L-1zB"/>
                                     <outlet property="delegate" destination="oQ0-PE-4h4" id="MGh-PR-C6u"/>
@@ -1472,12 +1468,10 @@
     </scenes>
     <resources>
         <image name="Ball.png" width="958" height="942"/>
-        <image name="BottomCurve.png" width="501" height="382"/>
         <image name="CricketBat.png" width="73" height="529"/>
         <image name="ScoreCricketOpeningDarkBlue.png" width="501" height="719"/>
         <image name="Team1" width="399" height="447"/>
         <image name="Team2" width="371" height="450"/>
-        <image name="TopCurve.png" width="501" height="406"/>
         <image name="blue_background.png" width="640" height="960"/>
         <image name="blurredBackgroundScoring.png" width="640" height="1136"/>
         <image name="helpPhoto.png" width="640" height="832"/>

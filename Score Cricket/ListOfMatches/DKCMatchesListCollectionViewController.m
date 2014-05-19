@@ -14,6 +14,7 @@
 #import "UIImage+StackBlur.h"
 #import "DKCMatchesListCollectionViewCell.h"
 #import "DKCDynamicCollectionViewFlowLayout.h"
+#import "DKCBackgroundImage.h"
 
 #define matchesListCollectiveViewCellWidth 300
 #define matchesListCollectiveViewCellHeight 60
@@ -43,7 +44,7 @@
 	// Do any additional setup after loading the view.
     self.navigationController.navigationBarHidden = NO;
     self.tableDataCopy = [[NSMutableArray alloc] initWithCapacity:0];
-    [self.collectionView setBackgroundView:[[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"blue_background.png"] stackBlur:60] ]];
+    [self.collectionView setBackgroundView:[[UIImageView alloc] initWithImage:[DKCBackgroundImage backgroundImage] ]];
     if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1) {
         // Load resources for iOS 6.1 or earlier
         [self.collectionView setFrame:CGRectMake(0, self.navigationController.navigationBar.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - self.navigationController.navigationBar.frame.size.height)];
@@ -71,6 +72,7 @@
 - (void) viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+  
     self.tableData = [DKCCreatePList GetListOfMatches];
     [self.tableDataCopy removeAllObjects];
     if (self.isCompleted)
@@ -97,7 +99,6 @@
         }
         self.title = @"In Progress";
     }
-    [self.collectionView reloadData];
 	
 	
 	// May return nil if a tracker has not already been initialized with a
@@ -111,6 +112,13 @@
 	
 	[tracker send:[[GAIDictionaryBuilder createAppView] build]];
 	
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+	[super viewDidAppear:animated];
+	
+	[self.collectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning

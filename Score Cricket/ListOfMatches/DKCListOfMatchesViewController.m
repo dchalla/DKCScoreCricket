@@ -13,6 +13,7 @@
 #import "DKCListOfMatchesCell.h"
 #import <QuartzCore/QuartzCore.h>
 #import "UIImage+StackBlur.h"
+#import "DKCBackgroundImage.h"
 
 @interface DKCListOfMatchesViewController ()
 {
@@ -47,7 +48,7 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"blue_background.png"] stackBlur:60] ]];
+    [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[DKCBackgroundImage backgroundImage] ]];
     self.tableView.backgroundView.frame = self.tableView.frame;
     self.tableView.backgroundColor = [UIColor clearColor];
     

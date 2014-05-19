@@ -146,6 +146,9 @@
 	[pf_MatchObject setObject:status forKey:@"Status"];
 	[pf_MatchObject setObject:matchData forKey:@"MatchData"];
 	[pf_MatchObject setObject:[NSDate date] forKey:@"MatchStartDate"];
+	NSCalendar *calendar = [NSCalendar currentCalendar];
+	NSDateComponents *todayComponents = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:[NSDate date]];
+	[pf_MatchObject setObject:[calendar dateFromComponents:todayComponents] forKey:@"DatePickerStartDate"];
 	[pf_MatchObject saveInBackground];
 	
 }
@@ -165,9 +168,36 @@
 				PFObject *pf_MatchObject = [objects objectAtIndex:0];
 				[pf_MatchObject setObject:matchDataCopy[@"Team1"][@"TeamName"] forKey:@"Team1"];
 				[pf_MatchObject setObject:matchDataCopy[@"Team2"][@"TeamName"] forKey:@"Team2"];
-				[pf_MatchObject setObject:status forKey:@"isCurrent"];
-				[pf_MatchObject setObject:status forKey:@"Status"];
+				if (![status isEqualToString:@"current"])
+				{
+					[pf_MatchObject setObject:status forKey:@"isCurrent"];
+					[pf_MatchObject setObject:status forKey:@"Status"];
+				}
+				
 				[pf_MatchObject setObject:matchDataCopy forKey:@"MatchData"];
+				
+				NSString *firstInningsBattingTeam = matchDataCopy[@"FirstInnings"][@"BattingTeam"];
+				if ([firstInningsBattingTeam isEqualToString:matchDataCopy[@"Team1"][@"TeamName"] ])
+				{
+					NSMutableDictionary *stats = [[matchDataCopy objectForKey:@"FirstInnings"] objectForKey:@"Statistics"];
+					[pf_MatchObject setObject:stats[@"Score"] forKey:@"Team1Score"];
+					[pf_MatchObject setObject:stats[@"Balls"] forKey:@"Team1Balls"];
+					
+					stats = [[matchDataCopy objectForKey:@"SecondInnings"] objectForKey:@"Statistics"];
+					[pf_MatchObject setObject:stats[@"Score"] forKey:@"Team2Score"];
+					[pf_MatchObject setObject:stats[@"Balls"] forKey:@"Team2Balls"];
+					
+				}
+				else
+				{
+					NSMutableDictionary *stats = [[matchDataCopy objectForKey:@"FirstInnings"] objectForKey:@"Statistics"];
+					[pf_MatchObject setObject:stats[@"Score"] forKey:@"Team2Score"];
+					[pf_MatchObject setObject:stats[@"Balls"] forKey:@"Team2Balls"];
+					
+					stats = [[matchDataCopy objectForKey:@"SecondInnings"] objectForKey:@"Statistics"];
+					[pf_MatchObject setObject:stats[@"Score"] forKey:@"Team1Score"];
+					[pf_MatchObject setObject:stats[@"Balls"] forKey:@"Team1Balls"];
+				}
 				[pf_MatchObject saveInBackground];
 			}
 			

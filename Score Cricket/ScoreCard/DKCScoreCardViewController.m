@@ -14,10 +14,14 @@
 #ifdef __APPLE__
 #include "TargetConditionals.h"
 #endif
+#import "DKCBackgroundImage.h"
+#import "BOZPongRefreshControl.h"
+
 
 @interface DKCScoreCardViewController ()
 @property (nonatomic)CGRect tableViewFrame;
 @property (nonatomic)UIImageView *screenshotImageView;
+@property (strong, nonatomic) BOZPongRefreshControl* pongRefreshControl;
 @end
 
 @implementation DKCScoreCardViewController
@@ -39,6 +43,18 @@
     return self;
 }
 
+- (void)viewDidLayoutSubviews
+{
+	[super viewDidLayoutSubviews];
+	if (self.isLive)
+	{
+		self.pongRefreshControl = [BOZPongRefreshControl attachToTableView:self.tableView
+														 withRefreshTarget:self
+														  andRefreshAction:@selector(refreshTriggered)];
+	}
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -49,7 +65,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationController.navigationBarHidden=NO;
-    [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"blue_background.png"] stackBlur:60]]];
+    [self.tableView setBackgroundView:[[UIImageView alloc] initWithImage:[DKCBackgroundImage backgroundImage]]];
     self.tableView.backgroundView.frame = self.tableView.frame;
     self.tableView.separatorColor = [UIColor colorWithWhite:0 alpha:0.2];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -132,6 +148,16 @@
         headerView.inningsTitle.text = @"Second Innings";
     }
     [self.tableView reloadData];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+	[super viewWillDisappear:animated];
+	if (self.isLive)
+	{
+		[self.pongRefreshControl finishedLoading];
+	}
+	
 }
 
 - (void)viewDidUnload
@@ -491,6 +517,11 @@
 #pragma mark - action menu
 - (void)handleAction
 {
+	if (self.isLive)
+	{
+		[self shareScoreCard];
+		return;
+	}
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Share score card", @"Transfer match", nil];
     actionSheet.actionSheetStyle = UIActionSheetStyleBlackTranslucent;
     [actionSheet showInView:self.view];
@@ -604,6 +635,60 @@
     _screenshotImageView.image = img;
     [self.view addSubview:_screenshotImageView];
 }
+
+#pragma mark - Notifying the pong refresh control of scrolling
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+	if (self.isLive)
+	{
+		[self.pongRefreshControl scrollViewDidScroll];
+	}
+    
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+	if (self.isLive)
+	{
+		[self.pongRefreshControl scrollViewDidEndDragging];
+	}
+    
+}
+
+#pragma mark - Listening for the user to trigger a refresh
+
+- (void)refreshTriggered
+{
+	__weak DKCScoreCardViewController *wSelf = self;
+	
+	PFQuery *query = [PFQuery queryWithClassName:@"DevMatches2"];
+	[query whereKey:@"FileName" equalTo:self.MatchData[@"FileName"]];
+	[query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+		if (!error)
+		{
+			NSLog(@"Successfully Parse retrieved %d match data.", objects.count);
+			
+			if (objects.count)
+			{
+				PFObject *pf_MatchObject = [objects objectAtIndex:0];
+				wSelf.MatchData = pf_MatchObject[@"MatchData"];
+				[wSelf.pongRefreshControl performSelector:@selector(finishedLoading) withObject:self afterDelay:0.8];
+				[wSelf.tableView reloadData];
+			}
+			
+		}
+		else
+		{
+			// Log details of the failure
+			NSLog(@"Error: %@ %@", error, [error userInfo]);
+		}
+	}];
+
+
+}
+
+
 
 
 

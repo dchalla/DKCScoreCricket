@@ -70,6 +70,7 @@
     [self.pickerView reloadAllComponents];
     //[self.doneButton addGradientWithCornerRadius:9];
     [self addMotionAffect];
+	self.backgroundImageView.image = _backgroundBlurImage;
 }
 
 - (void)addMotionAffect

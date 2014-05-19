@@ -11,6 +11,8 @@
 #import "UIImage+StackBlur.h"
 #import <QuartzCore/QuartzCore.h>
 #import <Parse/Parse.h>
+#import "DKCBackgroundImage.h"
+#import "UIImage+ImageEffects.h"
 
 @interface DKCCreateMatchViewController ()
 {
@@ -101,7 +103,7 @@
     self.team1Data = [self MakeTeam:self.team1Title];
     self.team2Data = [self MakeTeam:self.team2Title];
     
-    self.backgroundImageView.image = [self.backgroundImageView.image stackBlur:60];
+    self.backgroundImageView.image = [DKCBackgroundImage backgroundImage];
     [self addMotionAffect];
 }
 
@@ -364,17 +366,11 @@
     DKCEditTeamViewController *editTeam = [self.storyboard instantiateViewControllerWithIdentifier:@"EditTeam"];
     editTeam.delegate=self;
     editTeam.tableData = teamTableData;
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, YES, 3);
-        [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
-        UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        UIImage *tempImg = [img stackBlur:80];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            editTeam.backgroundBlurredImage = tempImg;
-        });
-    });
+	UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, YES, 3);
+	[self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+	UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+	editTeam.backgroundBlurredImage = [DKCBackgroundImage backgroundImageWithImage:img];
     
     UINavigationController *tempNavController = [[UINavigationController alloc] initWithRootViewController:editTeam];
     tempNavController.navigationBar.barStyle = UIBarStyleBlackTranslucent;

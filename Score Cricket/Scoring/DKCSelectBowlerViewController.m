@@ -43,6 +43,7 @@
     //[self.doneButton addGradientWithCornerRadius:9];
     self.selectedBowler = self.currentBowler;
     [self addMotionAffect];
+	self.backgroundImageView.image = _backgroundBlurImage;
 }
 
 - (void)addMotionAffect

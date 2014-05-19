@@ -11,10 +11,7 @@
 #import "../CreateMatch/DKCCreateMatchViewController.h"
 #import "GAITrackedViewController.h"
 
-@interface DKCMainMenuViewController : GAITrackedViewController
-
-@property (nonatomic,strong) IBOutlet UIImageView *BottomCurve;
-@property (nonatomic,strong) IBOutlet UIImageView *TopCurve;
+@interface DKCMainMenuViewController : GAITrackedViewController<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic,strong) IBOutlet UIButton *CreateMatch;
 @property (nonatomic,strong) IBOutlet UIButton *InProgressMatch;
@@ -28,6 +25,8 @@
 @property (nonatomic, strong) UIView *disabledView;
 
 @property (nonatomic, strong) IBOutlet UIImageView *backgroundImageView;
+@property (nonatomic, strong) IBOutlet UIImageView *backgroundInitialImageView;
+@property (nonatomic, strong) UIImage *backgroundInitialImage;
 
 -(IBAction)CreateMatchWithAnimation:(id)sender;
 -(IBAction)InProgressMatchesWithAnimation:(id)sender;
