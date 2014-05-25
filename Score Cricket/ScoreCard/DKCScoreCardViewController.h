@@ -13,8 +13,10 @@
 #import "DKCScoreCardHeaderView.h"
 #import "GAITrackedViewController.h"
 #import <Parse/Parse.h>
+#import "iAd/ADBannerView.h"
+#import "GADBannerViewDelegate.h"
 
-@interface DKCScoreCardViewController : GAITrackedViewController <MFMailComposeViewControllerDelegate,UIActionSheetDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface DKCScoreCardViewController : GAITrackedViewController <MFMailComposeViewControllerDelegate,UIActionSheetDelegate, UITableViewDataSource, UITableViewDelegate,ADBannerViewDelegate,GADBannerViewDelegate>
 
 @property (nonatomic, strong) NSMutableDictionary *MatchData;
 @property (nonatomic, strong) NSString *currentInnings;

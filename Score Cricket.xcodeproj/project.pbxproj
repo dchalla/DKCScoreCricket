@@ -99,7 +99,7 @@
 		F961557C18A8A01F008FE4A9 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F961557B18A8A01F008FE4A9 /* AdSupport.framework */; };
 		F961557E18A8A02D008FE4A9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F961557D18A8A02D008FE4A9 /* CoreData.framework */; };
 		F961558018A8A045008FE4A9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F961557F18A8A045008FE4A9 /* libz.dylib */; };
-		F9C88BF91926C1A600196C94 /* DKCOnlineMatchesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C88BF81926C1A600196C94 /* DKCOnlineMatchesTableViewController.m */; };
+		F9C88BF91926C1A600196C94 /* DKCOnlineMatchesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C88BF81926C1A600196C94 /* DKCOnlineMatchesViewController.m */; };
 		F9C88BFD1927178900196C94 /* DKCScoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C88BFB1927178900196C94 /* DKCScoreTableViewCell.m */; };
 		F9C88BFE1927178900196C94 /* DKCScoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9C88BFC1927178900196C94 /* DKCScoreTableViewCell.xib */; };
 		F9C88C0419273D7600196C94 /* DIDatepicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C88C0119273D7600196C94 /* DIDatepicker.m */; };
@@ -118,6 +118,16 @@
 		F9E862F3190DE2E30015A003 /* autocompleteButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F9E862F1190DE2E30015A003 /* autocompleteButton@2x.png */; };
 		F9E862F7190E07610015A003 /* PJTernarySearchTree.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E862F6190E07610015A003 /* PJTernarySearchTree.m */; };
 		F9E862FA190E07B80015A003 /* DKCPlayersDatasource.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E862F9190E07B80015A003 /* DKCPlayersDatasource.m */; };
+		F9F7EF2A19326AFD001B78FC /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9F7EF2819326AFD001B78FC /* README.txt */; };
+		F9F7EF2C19326B4B001B78FC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F7EF2B19326B4B001B78FC /* AVFoundation.framework */; };
+		F9F7EF2E19326B63001B78FC /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F7EF2D19326B63001B78FC /* CoreTelephony.framework */; };
+		F9F7EF2F19326D11001B78FC /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F7EF2719326AFD001B78FC /* libGoogleAdMobAds.a */; };
+		F9F7EF3119327E43001B78FC /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F7EF3019327E43001B78FC /* Social.framework */; };
+		F9F7EF3319327E77001B78FC /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F7EF3219327E77001B78FC /* Twitter.framework */; };
+		F9F7EF3519328734001B78FC /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F7EF3419328734001B78FC /* Accounts.framework */; };
+		F9F7F08919328892001B78FC /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F7EF3719328890001B78FC /* FacebookSDK.framework */; };
+		F9F7F0A219328892001B78FC /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F9F7EF6919328891001B78FC /* LICENSE */; };
+		F9F7F0A319328892001B78FC /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = F9F7EF6A19328891001B78FC /* README.txt */; };
 		F9FA39F819259115005EC30F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9FA39F719259115005EC30F /* Parse.framework */; };
 		F9FA39FA19259306005EC30F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9FA39F919259306005EC30F /* Security.framework */; };
 		F9FA39FC19259313005EC30F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9FA39FB19259313005EC30F /* MobileCoreServices.framework */; };
@@ -264,8 +274,8 @@
 		F961557B18A8A01F008FE4A9 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		F961557D18A8A02D008FE4A9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		F961557F18A8A045008FE4A9 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		F9C88BF71926C1A600196C94 /* DKCOnlineMatchesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCOnlineMatchesTableViewController.h; path = OnlineMatches/DKCOnlineMatchesTableViewController.h; sourceTree = "<group>"; };
-		F9C88BF81926C1A600196C94 /* DKCOnlineMatchesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCOnlineMatchesTableViewController.m; path = OnlineMatches/DKCOnlineMatchesTableViewController.m; sourceTree = "<group>"; };
+		F9C88BF71926C1A600196C94 /* DKCOnlineMatchesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCOnlineMatchesViewController.h; path = OnlineMatches/DKCOnlineMatchesViewController.h; sourceTree = "<group>"; };
+		F9C88BF81926C1A600196C94 /* DKCOnlineMatchesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCOnlineMatchesViewController.m; path = OnlineMatches/DKCOnlineMatchesViewController.m; sourceTree = "<group>"; };
 		F9C88BFA1927178900196C94 /* DKCScoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCScoreTableViewCell.h; path = OnlineMatches/DKCScoreTableViewCell.h; sourceTree = "<group>"; };
 		F9C88BFB1927178900196C94 /* DKCScoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCScoreTableViewCell.m; path = OnlineMatches/DKCScoreTableViewCell.m; sourceTree = "<group>"; };
 		F9C88BFC1927178900196C94 /* DKCScoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DKCScoreTableViewCell.xib; path = OnlineMatches/DKCScoreTableViewCell.xib; sourceTree = "<group>"; };
@@ -295,6 +305,29 @@
 		F9E862F6190E07610015A003 /* PJTernarySearchTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PJTernarySearchTree.m; sourceTree = "<group>"; };
 		F9E862F8190E07B80015A003 /* DKCPlayersDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DKCPlayersDatasource.h; path = Infrastructure/DKCPlayersDatasource.h; sourceTree = "<group>"; };
 		F9E862F9190E07B80015A003 /* DKCPlayersDatasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DKCPlayersDatasource.m; path = Infrastructure/DKCPlayersDatasource.m; sourceTree = "<group>"; };
+		F9F7EF1B19326AFD001B78FC /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
+		F9F7EF1C19326AFD001B78FC /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
+		F9F7EF1D19326AFD001B78FC /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
+		F9F7EF1E19326AFD001B78FC /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
+		F9F7EF1F19326AFD001B78FC /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		F9F7EF2019326AFD001B78FC /* GADInAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInAppPurchase.h; sourceTree = "<group>"; };
+		F9F7EF2119326AFD001B78FC /* GADInAppPurchaseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInAppPurchaseDelegate.h; sourceTree = "<group>"; };
+		F9F7EF2219326AFD001B78FC /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
+		F9F7EF2319326AFD001B78FC /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
+		F9F7EF2419326AFD001B78FC /* GADModules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADModules.h; sourceTree = "<group>"; };
+		F9F7EF2519326AFD001B78FC /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
+		F9F7EF2619326AFD001B78FC /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
+		F9F7EF2719326AFD001B78FC /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
+		F9F7EF2819326AFD001B78FC /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		F9F7EF2B19326B4B001B78FC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F9F7EF2D19326B63001B78FC /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		F9F7EF3019327E43001B78FC /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		F9F7EF3219327E77001B78FC /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		F9F7EF3419328734001B78FC /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		F9F7EF3719328890001B78FC /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		F9F7EF6919328891001B78FC /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		F9F7EF6A19328891001B78FC /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		F9F7F16F19329625001B78FC /* DKCHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DKCHeader.h; path = Infrastructure/DKCHeader.h; sourceTree = "<group>"; };
 		F9FA39F719259115005EC30F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		F9FA39F919259306005EC30F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		F9FA39FB19259313005EC30F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -305,6 +338,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9F7EF3519328734001B78FC /* Accounts.framework in Frameworks */,
+				F9F7EF3319327E77001B78FC /* Twitter.framework in Frameworks */,
+				F9F7EF3119327E43001B78FC /* Social.framework in Frameworks */,
+				1BEF77471787228200336878 /* StoreKit.framework in Frameworks */,
+				F9F7EF2F19326D11001B78FC /* libGoogleAdMobAds.a in Frameworks */,
+				EE82255F15856EE300D84530 /* MessageUI.framework in Frameworks */,
+				F9F7EF2E19326B63001B78FC /* CoreTelephony.framework in Frameworks */,
+				F9F7EF2C19326B4B001B78FC /* AVFoundation.framework in Frameworks */,
+				F961557C18A8A01F008FE4A9 /* AdSupport.framework in Frameworks */,
 				F9C88C0D1927C44D00196C94 /* Accelerate.framework in Frameworks */,
 				EE4F80C51730AB0700F08178 /* CFNetwork.framework in Frameworks */,
 				F9FA39FC19259313005EC30F /* MobileCoreServices.framework in Frameworks */,
@@ -313,15 +355,13 @@
 				F961558018A8A045008FE4A9 /* libz.dylib in Frameworks */,
 				1BEF77491787232100336878 /* SystemConfiguration.framework in Frameworks */,
 				F961557E18A8A02D008FE4A9 /* CoreData.framework in Frameworks */,
-				F961557C18A8A01F008FE4A9 /* AdSupport.framework in Frameworks */,
-				1BEF77471787228200336878 /* StoreKit.framework in Frameworks */,
 				F9FA39F819259115005EC30F /* Parse.framework in Frameworks */,
 				1B08302A176A3D4900D85392 /* CoreImage.framework in Frameworks */,
 				EE4F80C91730AB2500F08178 /* CoreLocation.framework in Frameworks */,
 				EE4F80C71730AB1300F08178 /* AudioToolbox.framework in Frameworks */,
-				EE82255F15856EE300D84530 /* MessageUI.framework in Frameworks */,
 				EEDCC2E815291B6F00A9952C /* QuartzCore.framework in Frameworks */,
 				EEDCC228151EBD2700A9952C /* UIKit.framework in Frameworks */,
+				F9F7F08919328892001B78FC /* FacebookSDK.framework in Frameworks */,
 				EEDCC22A151EBD2700A9952C /* Foundation.framework in Frameworks */,
 				EEDCC22C151EBD2700A9952C /* CoreGraphics.framework in Frameworks */,
 				F961557318A89FD2008FE4A9 /* libGoogleAnalyticsServices.a in Frameworks */,
@@ -419,6 +459,11 @@
 		EEDCC226151EBD2700A9952C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F9F7EF3419328734001B78FC /* Accounts.framework */,
+				F9F7EF3219327E77001B78FC /* Twitter.framework */,
+				F9F7EF3019327E43001B78FC /* Social.framework */,
+				F9F7EF2D19326B63001B78FC /* CoreTelephony.framework */,
+				F9F7EF2B19326B4B001B78FC /* AVFoundation.framework */,
 				F9C88C0C1927C44D00196C94 /* Accelerate.framework */,
 				F9FA39FB19259313005EC30F /* MobileCoreServices.framework */,
 				F9FA39F919259306005EC30F /* Security.framework */,
@@ -443,6 +488,8 @@
 		EEDCC22D151EBD2700A9952C /* Score Cricket */ = {
 			isa = PBXGroup;
 			children = (
+				F9F7EF3619328890001B78FC /* FacebookSDK */,
+				F9F7EF1A19326AFD001B78FC /* GoogleAdMob */,
 				F9C88C151929310300196C94 /* BOZPongRefreshControl */,
 				F9C88BFF19273D7600196C94 /* DatePicker */,
 				F9C88BF61926C12000196C94 /* OnlineMatches */,
@@ -576,6 +623,7 @@
 				F9E862F9190E07B80015A003 /* DKCPlayersDatasource.m */,
 				F9C88C0E1927C77100196C94 /* DKCBackgroundImage.h */,
 				F9C88C0F1927C77100196C94 /* DKCBackgroundImage.m */,
+				F9F7F16F19329625001B78FC /* DKCHeader.h */,
 			);
 			name = Infrastructure;
 			sourceTree = "<group>";
@@ -676,8 +724,8 @@
 		F9C88BF61926C12000196C94 /* OnlineMatches */ = {
 			isa = PBXGroup;
 			children = (
-				F9C88BF71926C1A600196C94 /* DKCOnlineMatchesTableViewController.h */,
-				F9C88BF81926C1A600196C94 /* DKCOnlineMatchesTableViewController.m */,
+				F9C88BF71926C1A600196C94 /* DKCOnlineMatchesViewController.h */,
+				F9C88BF81926C1A600196C94 /* DKCOnlineMatchesViewController.m */,
 				F9C88BFA1927178900196C94 /* DKCScoreTableViewCell.h */,
 				F9C88BFB1927178900196C94 /* DKCScoreTableViewCell.m */,
 				F9C88BFC1927178900196C94 /* DKCScoreTableViewCell.xib */,
@@ -727,6 +775,37 @@
 			path = PJTernarySearchTree;
 			sourceTree = "<group>";
 		};
+		F9F7EF1A19326AFD001B78FC /* GoogleAdMob */ = {
+			isa = PBXGroup;
+			children = (
+				F9F7EF1B19326AFD001B78FC /* GADAdMobExtras.h */,
+				F9F7EF1C19326AFD001B78FC /* GADAdNetworkExtras.h */,
+				F9F7EF1D19326AFD001B78FC /* GADAdSize.h */,
+				F9F7EF1E19326AFD001B78FC /* GADBannerView.h */,
+				F9F7EF1F19326AFD001B78FC /* GADBannerViewDelegate.h */,
+				F9F7EF2019326AFD001B78FC /* GADInAppPurchase.h */,
+				F9F7EF2119326AFD001B78FC /* GADInAppPurchaseDelegate.h */,
+				F9F7EF2219326AFD001B78FC /* GADInterstitial.h */,
+				F9F7EF2319326AFD001B78FC /* GADInterstitialDelegate.h */,
+				F9F7EF2419326AFD001B78FC /* GADModules.h */,
+				F9F7EF2519326AFD001B78FC /* GADRequest.h */,
+				F9F7EF2619326AFD001B78FC /* GADRequestError.h */,
+				F9F7EF2719326AFD001B78FC /* libGoogleAdMobAds.a */,
+				F9F7EF2819326AFD001B78FC /* README.txt */,
+			);
+			path = GoogleAdMob;
+			sourceTree = "<group>";
+		};
+		F9F7EF3619328890001B78FC /* FacebookSDK */ = {
+			isa = PBXGroup;
+			children = (
+				F9F7EF3719328890001B78FC /* FacebookSDK.framework */,
+				F9F7EF6919328891001B78FC /* LICENSE */,
+				F9F7EF6A19328891001B78FC /* README.txt */,
+			);
+			path = FacebookSDK;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -767,6 +846,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				he,
 			);
 			mainGroup = EEDCC218151EBD2700A9952C;
 			productRefGroup = EEDCC224151EBD2700A9952C /* Products */;
@@ -793,6 +873,7 @@
 				EEDCC2AE1522A5E700A9952C /* ScoreCricketOpening.jpg in Resources */,
 				F9C88C13192914D300196C94 /* Default-568h.png in Resources */,
 				EEDCC2B01522A5E700A9952C /* ScoreCricketOpeningDark.jpg in Resources */,
+				F9F7EF2A19326AFD001B78FC /* README.txt in Resources */,
 				EEDCC2B21522A5E700A9952C /* ScoreCricketOpeningDarkGreen.png in Resources */,
 				EEDCC2B41522A5E700A9952C /* TopCurve.png in Resources */,
 				EEDCC2B71522A6FC00A9952C /* CricketBat.png in Resources */,
@@ -816,6 +897,7 @@
 				F9E862F3190DE2E30015A003 /* autocompleteButton@2x.png in Resources */,
 				EEA204C217333D80003D8350 /* rightHand.png in Resources */,
 				F961554818A89FD2008FE4A9 /* Changelog.txt in Resources */,
+				F9F7F0A219328892001B78FC /* LICENSE in Resources */,
 				1BC7366C173AF7D200AB3941 /* hands.png in Resources */,
 				1BC7367F173C1DD000AB3941 /* handsButton.png in Resources */,
 				F9C88C14192914D400196C94 /* Default@2x.png in Resources */,
@@ -824,6 +906,7 @@
 				1B09176817BE846700F8AC2A /* Icon-72.png in Resources */,
 				1B09176917BE846700F8AC2A /* Icon-72@2x.png in Resources */,
 				1B09176A17BE846700F8AC2A /* Icon-Small-50.png in Resources */,
+				F9F7F0A319328892001B78FC /* README.txt in Resources */,
 				1B09176B17BE846700F8AC2A /* Icon-Small-50@2x.png in Resources */,
 				1B09176C17BE846700F8AC2A /* Icon-Small.png in Resources */,
 				1BACAC4617EA5B9000C61896 /* Default.png in Resources */,
@@ -859,7 +942,7 @@
 				F9E862EF190DDA630015A003 /* HTAutocompleteTextField.m in Sources */,
 				EEDCC2DD1528F47700A9952C /* DKCScoringViewController.m in Sources */,
 				EEDCC2E51529155700A9952C /* UIButton+GradientColor.m in Sources */,
-				F9C88BF91926C1A600196C94 /* DKCOnlineMatchesTableViewController.m in Sources */,
+				F9C88BF91926C1A600196C94 /* DKCOnlineMatchesViewController.m in Sources */,
 				EEFC2FCB153E4D28000E835A /* DKCSelectBowlerViewController.m in Sources */,
 				1BF1171717DA81EE004D7067 /* DKCDynamicCollectionViewFlowLayout.m in Sources */,
 				F9C88C0B1927C34300196C94 /* UIImage+ImageEffects.m in Sources */,
@@ -966,7 +1049,13 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer: Dinesh Challa (8N5A6T7RGD)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Dinesh Challa (8N5A6T7RGD)";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Score",
+					Cricket/FacebookSDK,
+					"$(PROJECT_DIR)/Score",
+					Cricket/FacebookSDK/FBAudienceNetwork,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Score Cricket/Score Cricket-Prefix.pch";
 				INFOPLIST_FILE = "Score Cricket/Score Cricket-Info.plist";
@@ -974,7 +1063,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Score Cricket/GoogleAnalyticsServicesiOS_3.03a\"",
+					"$(PROJECT_DIR)/Score",
+					"\"$(SRCROOT)/Score Cricket/GoogleAdMob\"",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "237D31F8-1B96-4AC9-A134-4335ADDBDC76";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "237D31F8-1B96-4AC9-A134-4335ADDBDC76";
@@ -989,7 +1081,13 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Dinesh Challa (46TZ85ZB65)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Dinesh Challa (46TZ85ZB65)";
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Score",
+					Cricket/FacebookSDK,
+					"$(PROJECT_DIR)/Score",
+					Cricket/FacebookSDK/FBAudienceNetwork,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Score Cricket/Score Cricket-Prefix.pch";
 				INFOPLIST_FILE = "Score Cricket/Score Cricket-Info.plist";
@@ -997,7 +1095,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Score Cricket/GoogleAnalyticsServicesiOS_3.03a\"",
+					"$(PROJECT_DIR)/Score",
+					"\"$(SRCROOT)/Score Cricket/GoogleAdMob\"",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "956A88E4-903B-4B60-AB92-88D588823D24";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "956A88E4-903B-4B60-AB92-88D588823D24";

@@ -8,7 +8,7 @@
 
 #import "DKCMainMenuViewController.h"
 #import "DKCListOfMatchesViewController.h"
-#import "DKCOnlineMatchesTableViewController.h"
+#import "DKCOnlineMatchesViewController.h"
 #import "DKCCreatePList.h"
 #import <QuartzCore/QuartzCore.h>
 #import "DKCReachability.h"
@@ -169,7 +169,7 @@
 
 - (void)openOnlineMatches
 {
-	DKCOnlineMatchesTableViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"DKCOnlineMatchesTableViewController"];
+	DKCOnlineMatchesViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"DKCOnlineMatchesViewController"];
 	if (_cellIndexPath.row == 0)
 	{
 		controller.isLive = YES;

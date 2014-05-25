@@ -12,12 +12,16 @@
 #import "UIImage+ImageEffects.h"
 #import "DKCBackgroundImage.h"
 #import "DKCMainMenuViewController.h"
+#import "GADBannerView.h"
+#import "DKCHeader.h"
 
 
 @interface DKCScoringViewController ()
 @property (nonatomic) BOOL didEndInnings;
 @property (nonatomic) BOOL isHelpImageVisible;
 @property (nonatomic) BOOL bannerIsVisible;
+@property (nonatomic) BOOL isGADbannerVisible;
+@property (nonatomic, strong) GADBannerView *gadBannerView;
 @end
 
 
@@ -93,11 +97,24 @@
     return self;
 }
 
+- (GADBannerView *)gadBannerView
+{
+	if (!_gadBannerView)
+	{
+		_gadBannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
+		_gadBannerView.adUnitID = GAD_BANNER_UNIT_ID;
+		_gadBannerView.rootViewController = self;
+		_gadBannerView.frame = CGRectMake(0, self.view.frame.size.height - _gadBannerView.frame.size.height, self.view.frame.size.width, _gadBannerView.frame.size.height);
+		_gadBannerView.delegate = self;
+		[self.view addSubview:_gadBannerView];
+	}
+	return _gadBannerView;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-	//self.bannerIsVisible = YES;
     self.title = @"Score Cricket";
     self.screenName = @"Scoring";
     didEndInnings = NO;
@@ -1604,18 +1621,50 @@
 
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner
 {
+	
     if (!self.bannerIsVisible)
     {
+		[self hideGADBannerView];
         [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
 		// Assumes the banner view is just off the bottom of the screen.
         banner.frame = CGRectOffset(banner.frame, 0, -banner.frame.size.height);
         [UIView commitAnimations];
         self.bannerIsVisible = YES;
+
     }
+}
+
+- (void)hideGADBannerView
+{
+	if (self.isGADbannerVisible)
+	{
+		self.isGADbannerVisible = NO;
+		[UIView beginAnimations:@"GADanimateAdBannerOff" context:NULL];
+		// Assumes the banner view is placed at the bottom of the screen.
+		self.gadBannerView.frame = CGRectMake(0, self.view.frame.size.height, self.view.frame.size.width, _gadBannerView.frame.size.height);
+		[UIView commitAnimations];
+	}
+	
+}
+
+- (void)showGADBannerView
+{
+	if (!self.isGADbannerVisible)
+	{
+		self.isGADbannerVisible = YES;
+		GADRequest *request = [GADRequest request];
+		//request.testDevices = @[ GAD_SIMULATOR_ID ];
+		[self.gadBannerView loadRequest:request];
+		[UIView beginAnimations:@"GADanimateAdBannerOn" context:NULL];
+		// Assumes the banner view is just off the bottom of the screen.
+		self.gadBannerView.frame = CGRectMake(0, self.view.frame.size.height - _gadBannerView.frame.size.height, self.view.frame.size.width, _gadBannerView.frame.size.height);
+		[UIView commitAnimations];
+	}
 }
 
 - (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
 {
+	[self showGADBannerView];
 	if (self.bannerIsVisible)
     {
         [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
@@ -1627,4 +1676,12 @@
 }
 
 
+- (void) adView: (GADBannerView*) view didFailToReceiveAdWithError: (GADRequestError*) error
+{
+	
+}
+- (void) adViewDidReceiveAd: (GADBannerView*) view
+{
+	
+}
 @end

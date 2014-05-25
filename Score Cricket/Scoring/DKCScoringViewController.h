@@ -18,9 +18,10 @@
 #import "../ScoreCard/DKCScoreCardViewController.h"
 #import "GAITrackedViewController.h"
 #import "iAd/ADBannerView.h"
+#import "GADBannerViewDelegate.h"
 
 
-@interface DKCScoringViewController : GAITrackedViewController <EditTeamViewDelegate,SelectBowlerViewDelegate,AdditionalRunsViewDelegate,OutViewDelegate,SelectBatsmanViewDelegate,UIActionSheetDelegate,ADBannerViewDelegate>
+@interface DKCScoringViewController : GAITrackedViewController <EditTeamViewDelegate,SelectBowlerViewDelegate,AdditionalRunsViewDelegate,OutViewDelegate,SelectBatsmanViewDelegate,UIActionSheetDelegate,ADBannerViewDelegate,GADBannerViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UIButton *button0;
 @property (nonatomic, strong) IBOutlet UIButton *button1;
