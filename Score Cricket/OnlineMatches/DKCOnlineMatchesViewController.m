@@ -117,7 +117,7 @@
 	
 	self.fetched = NO;
 	[self.tableView reloadData];
-	PFQuery *query = [PFQuery queryWithClassName:@"DevMatches2"];
+	PFQuery *query = [PFQuery queryWithClassName:DKC_PROD_MATCHES];
 	if (self.isLive)
 	{
 		[query whereKey:@"isCurrent" equalTo:@"current"];
@@ -128,8 +128,8 @@
 	}
 	
 	[query whereKey:@"DatePickerStartDate" equalTo:date];
-	//[query whereKey:@"Team1" notEqualTo:@"Team 1"];
-	//[query whereKey:@"Team2" notEqualTo:@"Team 2"];
+	[query whereKey:@"Team1" notEqualTo:@"Team 1"];
+	[query whereKey:@"Team2" notEqualTo:@"Team 2"];
 	[query selectKeys:@[@"Team1", @"Team2", @"Team2Score", @"Team1Score", @"Team2Balls", @"Team1Balls", @"Status",@"FileName",@"isCurrent",@"MatchStartDate"]];
 	[query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
 		wSelf.fetched = YES;
@@ -292,6 +292,7 @@
             }
         }
     }
+	[self openScoreCard];
     
 }
 
@@ -333,19 +334,22 @@
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
-	PFObject *object = self.tableData[_cellIndexPath.row];
 	DKCScoreTableViewCell *cell = (DKCScoreTableViewCell *) [self.tableView cellForRowAtIndexPath:_cellIndexPath];
 	CGRect tempFrame = cell.frame;
     tempFrame.size.width = self.view.frame.size.width;
     cell.frame = tempFrame;
+	cell.backgroundCellView.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.4];
+}
 
-
+- (void)openScoreCard
+{
+	PFObject *object = self.tableData[_cellIndexPath.row];
 	[object fetchIfNeededInBackgroundWithBlock:^(PFObject *object, NSError *error) {
 		if (!object|| error)
 		{
 			return ;
 		}
-		cell.backgroundCellView.backgroundColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.4];
+		
 		DKCScoreCardViewController *scoreCard = [self.storyboard instantiateViewControllerWithIdentifier:@"ScoreCardViewController"];
 		scoreCard.MatchData = object[@"MatchData"];
         scoreCard.currentInnings = @"FirstInnings";
@@ -353,8 +357,6 @@
         self.title = @"Back";
         [self.navigationController pushViewController:scoreCard animated:YES];
 	}];
-    
-    
 }
 
 #pragma mark - Notifying the pong refresh control of scrolling

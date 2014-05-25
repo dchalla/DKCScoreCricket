@@ -667,7 +667,7 @@
 {
 	__weak DKCScoreCardViewController *wSelf = self;
 	
-	PFQuery *query = [PFQuery queryWithClassName:@"DevMatches2"];
+	PFQuery *query = [PFQuery queryWithClassName:DKC_PROD_MATCHES];
 	[query whereKey:@"FileName" equalTo:self.MatchData[@"FileName"]];
 	[query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
 		if (!error)

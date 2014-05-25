@@ -138,7 +138,7 @@
 
 + (void) CreateParseObjectWithFileName:(NSString *)fileName matchData:(NSMutableDictionary *)matchData status:(NSString *)status
 {
-    PFObject *pf_MatchObject = [PFObject objectWithClassName:@"DevMatches2"];
+    PFObject *pf_MatchObject = [PFObject objectWithClassName:DKC_PROD_MATCHES];
 	[pf_MatchObject setObject:fileName forKey:@"FileName"];
     [pf_MatchObject setObject:matchData[@"Team1"][@"TeamName"] forKey:@"Team1"];
     [pf_MatchObject setObject:matchData[@"Team2"][@"TeamName"] forKey:@"Team2"];
@@ -156,7 +156,7 @@
 + (void) UpdateParseObjectWithFileName:(NSString *)fileName matchData:(NSMutableDictionary *)matchData status:(NSString *)status
 {
 	NSMutableDictionary *matchDataCopy = [matchData mutableCopy];
-	PFQuery *query = [PFQuery queryWithClassName:@"DevMatches2"];
+	PFQuery *query = [PFQuery queryWithClassName:DKC_PROD_MATCHES];
 	[query whereKey:@"FileName" equalTo:fileName];
 	[query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
 		if (!error)

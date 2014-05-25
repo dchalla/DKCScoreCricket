@@ -69,7 +69,8 @@
     
     
      self.pickerView= [[UIPickerView alloc] initWithFrame:CGRectMake(0.0, self.view.frame.size.height-120.0 - self.navigationController.navigationBar.frame.size.height, self.view.frame.size.width, 120.0)];
-    self.pickerView.backgroundColor = [UIColor colorWithWhite:1 alpha:0.3];
+    self.pickerView.backgroundColor = [UIColor blackColor];
+	self.pickerView.alpha = 0.8;
     self.pickerView.showsSelectionIndicator=YES;
     [self.view addSubview:self.pickerView];
     self.pickerView.delegate = self;
@@ -236,21 +237,26 @@
 }
 
 #pragma mark Picker Delegate Methods
-- (NSString *) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+
+- (NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    if (fieldActive==1) {
-        return [[self.oversPerInningsData objectAtIndex:row] stringValue];
+    NSString *title = @"";
+	if (fieldActive==1) {
+        title = [[self.oversPerInningsData objectAtIndex:row] stringValue];
     }
     else if (fieldActive==2)
     {
-        return [self.tossWonData objectAtIndex:row];
+        title = [self.tossWonData objectAtIndex:row];
     }
     else if (fieldActive==3)
     {
-        return [self.battingFirstData objectAtIndex:row];
+        title = [self.battingFirstData objectAtIndex:row];
     }
     
-    return @"";
+    NSAttributedString *attString = [[NSAttributedString alloc] initWithString:title attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+	
+	return attString;
+	
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component

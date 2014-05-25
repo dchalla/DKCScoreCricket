@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DKCHeader.h"
 
 @interface DKCCreatePList : NSObject
 
