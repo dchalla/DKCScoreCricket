@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "iAd/ADBannerView.h"
 #import "GADBannerViewDelegate.h"
+#import "GAI.h"
+#import "GAITracker.h"
+#import "GAIDictionaryBuilder.h"
+#import "GAIFields.h"
+#import "GAILogger.h"
 
 @interface DKCOnlineMatchesViewController : UIViewController <ADBannerViewDelegate,GADBannerViewDelegate,UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic) BOOL isLive;

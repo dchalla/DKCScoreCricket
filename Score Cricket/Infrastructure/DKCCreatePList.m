@@ -177,7 +177,7 @@
 				[pf_MatchObject setObject:matchDataCopy forKey:@"MatchData"];
 				
 				NSString *firstInningsBattingTeam = matchDataCopy[@"FirstInnings"][@"BattingTeam"];
-				if ([firstInningsBattingTeam isEqualToString:matchDataCopy[@"Team1"][@"TeamName"] ])
+				if ([firstInningsBattingTeam isEqualToString:@"Team1"])
 				{
 					NSMutableDictionary *stats = [[matchDataCopy objectForKey:@"FirstInnings"] objectForKey:@"Statistics"];
 					[pf_MatchObject setObject:stats[@"Score"] forKey:@"Team1Score"];
