@@ -27,6 +27,7 @@
     UIViewController *controllerToPush;
     UIView *animatedView;
 	NSIndexPath *_cellIndexPath;
+	BOOL animatingTableView;
 }
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -260,7 +261,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    return 2;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -286,7 +287,7 @@
 	}
 	else
 	{
-		label.text = @"Score a match";
+		label.text = @"Other";
 	}
 	
 	[backgroundView addSubview:blurView];
@@ -295,7 +296,11 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-	return 200;
+	if (section == 1)
+	{
+		return 200;
+	}
+	return 0;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
@@ -317,10 +322,11 @@
 	{
 		return 2;
 	}
-	else
+	else if(section == 1)
 	{
-		return 3;
+		return 1;
 	}
+	return 3;
     
 }
 
@@ -353,13 +359,17 @@
 	[cell addSubview:label];
 	label.textColor = [UIColor whiteColor];
 	label.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:16];
-	if (indexPath.row == 0)
+	if (indexPath.row == 0 && indexPath.section == 0)
 	{
 		label.text = @"Live Scores";
 	}
-	else if (indexPath.row == 1)
+	else if (indexPath.row == 1 && indexPath.section == 0)
 	{
 		label.text = @"Results";
+	}
+	else if (indexPath.row == 0 && indexPath.section == 1)
+	{
+		label.text = @"Share with friends";
 	}
     
 	
@@ -375,11 +385,13 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = (UITableViewCell *) [tableView cellForRowAtIndexPath:indexPath];
-    if (cell.frame.size.width != self.view.frame.size.width)
-    {
-        //return;
-    }
+	if (animatingTableView)
+	{
+		return;
+	}
+   
     _cellIndexPath = indexPath;
+	animatingTableView = YES;
     [self bounceView:cell amplitude:animationAmplitude duration:animationDuration delegate:YES];
     for (int i =1; i<=4; i++)
     {
@@ -438,13 +450,22 @@
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
+	animatingTableView = NO;
 	if ([anim isKindOfClass:[CAKeyframeAnimation class]])
 	{
 		UITableViewCell *cell = (UITableViewCell *) [self.tableView cellForRowAtIndexPath:_cellIndexPath];
 		CGRect tempFrame = cell.frame;
 		tempFrame.size.width = (self.view.frame.size.width + 120);
 		cell.frame = tempFrame;
-		[self openOnlineMatches];
+		if (_cellIndexPath.section == 0)
+		{
+			[self openOnlineMatches];
+		}
+		else
+		{
+			[self shareScoreCricket];
+		}
+		
 	}
 	else
 	{
@@ -454,6 +475,20 @@
 		[self.navigationController pushViewController:controllerToPush animated:YES];
 		
 	}
+}
+
+- (void)shareScoreCricket
+{
+	NSString *subject = @"Have you tried the Score Cricket app";
+	NSString *body = @"Checkout the new Score Cricket app. It is easy and fun to create/score a match on your fingertips. Now you can follow live/completed match around the world. I think you are going to love it.\n\nYou should definitely give it a try - Here is the link for the free download https://itunes.apple.com/us/app/score-cricket/id538655929?mt=8.\n\nFollow it on facebook http://www.facebook.com/ScoreCricket";
+	NSArray *objectsToShare = @[body];
+	
+    
+	
+	UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:objectsToShare applicationActivities:nil];
+    [controller setValue:subject forKey:@"subject"];
+    [self presentViewController:controller animated:YES completion:nil];
+	
 }
  
 

@@ -1054,9 +1054,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Score",
-					Cricket/FacebookSDK,
+					"\"$(SRCROOT)/Score Cricket/FacebookSDK\"",
 					"$(PROJECT_DIR)/Score",
-					Cricket/FacebookSDK/FBAudienceNetwork,
+					"\"$(SRCROOT)/Score Cricket/FacebookSDK/FBAudienceNetwork\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Score Cricket/Score Cricket-Prefix.pch";
@@ -1086,9 +1086,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Score",
-					Cricket/FacebookSDK,
+					"\"$(SRCROOT)/Score Cricket/FacebookSDK\"",
 					"$(PROJECT_DIR)/Score",
-					Cricket/FacebookSDK/FBAudienceNetwork,
+					"\"$(SRCROOT)/Score Cricket/FacebookSDK/FBAudienceNetwork\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Score Cricket/Score Cricket-Prefix.pch";

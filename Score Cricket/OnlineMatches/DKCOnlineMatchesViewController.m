@@ -33,10 +33,21 @@
 @property (nonatomic) BOOL isGADbannerVisible;
 @property (nonatomic, strong) GADBannerView *gadBannerView;
 @property (nonatomic, strong) ADBannerView *bannerView;
+@property (nonatomic, strong) NSDateFormatter *dateFormatter;
 @end
 
 @implementation DKCOnlineMatchesViewController
 
+
+- (NSDateFormatter *)dateFormatter
+{
+	if (!_dateFormatter)
+	{
+		_dateFormatter = [[NSDateFormatter alloc] init];
+		[_dateFormatter setDateFormat:DKC_DATE_NAV_DATE_FORMAT_STRING];
+	}
+	return _dateFormatter;
+}
 
 - (void)viewDidLayoutSubviews
 {
@@ -117,7 +128,14 @@
 	
 	self.fetched = NO;
 	[self.tableView reloadData];
-	PFQuery *query = [PFQuery queryWithClassName:DKC_PROD_MATCHES];
+	
+	PFQuery *dateQuery = [PFQuery queryWithClassName:DKC_PROD_MATCHES];
+	[dateQuery whereKey:@"DatePickerStartDate" equalTo:date];
+	
+	PFQuery *dateStringQuery = [PFQuery queryWithClassName:DKC_PROD_MATCHES];
+	[dateStringQuery whereKey:@"DatePickerStartDateString" equalTo:[self.dateFormatter stringFromDate:date]];
+	
+	PFQuery *query = [PFQuery orQueryWithSubqueries:@[dateQuery,dateStringQuery]];
 	if (self.isLive)
 	{
 		[query whereKey:@"isCurrent" equalTo:@"current"];
@@ -126,8 +144,6 @@
 	{
 		[query whereKey:@"isCurrent" equalTo:@"completed"];
 	}
-	
-	[query whereKey:@"DatePickerStartDate" equalTo:date];
 	[query whereKey:@"Team1" notEqualTo:@"Team 1"];
 	[query whereKey:@"Team2" notEqualTo:@"Team 2"];
 	[query selectKeys:@[@"Team1", @"Team2", @"Team2Score", @"Team1Score", @"Team2Balls", @"Team1Balls", @"Status",@"FileName",@"isCurrent",@"MatchStartDate"]];

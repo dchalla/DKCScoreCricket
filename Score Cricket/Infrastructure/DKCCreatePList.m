@@ -9,7 +9,9 @@
 #import "DKCCreatePList.h"
 #import <Parse/Parse.h>
 
+
 @implementation DKCCreatePList
+
 
 
 + (void)DeletePlistWithName:(NSString *)name
@@ -149,6 +151,9 @@
 	NSCalendar *calendar = [NSCalendar currentCalendar];
 	NSDateComponents *todayComponents = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:[NSDate date]];
 	[pf_MatchObject setObject:[calendar dateFromComponents:todayComponents] forKey:@"DatePickerStartDate"];
+	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+	[dateFormatter setDateFormat:DKC_DATE_NAV_DATE_FORMAT_STRING];
+	[pf_MatchObject setObject:[dateFormatter stringFromDate:[calendar dateFromComponents:todayComponents]] forKey:@"DatePickerStartDateString"];
 	[pf_MatchObject saveInBackground];
 	
 }
