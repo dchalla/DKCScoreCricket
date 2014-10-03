@@ -266,7 +266,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-	return 30;
+	return 35;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -274,7 +274,7 @@
 	UIView *backgroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 30)];
 	backgroundView.backgroundColor = [UIColor clearColor];
 	UIView *blurView = [UIView new];
-	blurView.frame = CGRectMake(0, 0, tableView.frame.size.width, 25);
+	blurView.frame = CGRectMake(0, 5, tableView.frame.size.width, 25);
 	blurView.backgroundColor =  [UIColor colorWithRed:0 green:0 blue:0 alpha:0.7];
 	blurView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 	UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(80, 0, blurView.frame.size.width - 2*60, blurView.frame.size.height)];
@@ -349,11 +349,11 @@
 		cell.textLabel.textColor = [UIColor whiteColor];
 		cell.textLabel.frame = CGRectMake(80, cell.textLabel.frame.origin.y, cell.textLabel.frame.size.width - 2*60, cell.textLabel.frame.size.height);
 		cell.selectionStyle = UITableViewCellSelectionStyleNone;
-		UIView *blurView = [UIView new];
+		UIView *blurView = [[UIView alloc] init];
 		blurView.frame = cell.frame;
 		blurView.backgroundColor =  [UIColor colorWithRed:0 green:0 blue:0 alpha:0.7];
 		blurView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-		[cell insertSubview:blurView belowSubview:cell.backgroundView];
+		cell.backgroundView = blurView;
 	}
 	UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(80, 0, cell.frame.size.width - 2*60, cell.frame.size.height)];
 	[cell addSubview:label];

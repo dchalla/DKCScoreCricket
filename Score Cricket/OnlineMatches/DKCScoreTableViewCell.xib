@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment version="1536" defaultVersion="1552" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -16,46 +16,39 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ugh-Eu-T4A" userLabel="Background View">
                         <rect key="frame" x="10" y="5" width="300" height="56"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVW-Q8-N9E">
-                                <rect key="frame" x="46" y="16" width="42" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="46" y="16" width="42" height="15.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6J-7r-FDY">
-                                <rect key="frame" x="203" y="15" width="42" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="202" y="15" width="42" height="15.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgJ-yb-WUt">
-                                <rect key="frame" x="138" y="34" width="25" height="12"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="138" y="34" width="24.5" height="12"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="250(50.1)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EB7-5q-1yL">
-                                <rect key="frame" x="93" y="17" width="46" height="13"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="250(50.1)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EB7-5q-1yL">
+                                <rect key="frame" x="93" y="17" width="45.5" height="13"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                 <color key="textColor" red="0.79068772810218979" green="0.78723768248175185" blue="0.79738822992700731" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="251(50)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qev-YZ-xjA">
-                                <rect key="frame" x="161" y="17" width="37" height="13"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="161" y="17" width="36.5" height="13"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                                 <color key="textColor" red="0.79068772810218979" green="0.78723768248175185" blue="0.79738822992700731" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6X-4W-eIH">
                                 <rect key="frame" x="144" y="16" width="12" height="14"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -68,6 +61,7 @@
                             <constraint firstItem="q6X-4W-eIH" firstAttribute="leading" secondItem="EB7-5q-1yL" secondAttribute="trailing" constant="5" id="I9E-PR-wwK"/>
                             <constraint firstItem="EB7-5q-1yL" firstAttribute="leading" secondItem="tVW-Q8-N9E" secondAttribute="trailing" constant="5" id="Kl1-3h-qPg"/>
                             <constraint firstAttribute="width" constant="300" id="L2Y-Kk-V5V"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="t6J-7r-FDY" secondAttribute="trailing" constant="1" id="MBY-8C-iyk"/>
                             <constraint firstItem="t6J-7r-FDY" firstAttribute="centerY" secondItem="q6X-4W-eIH" secondAttribute="centerY" id="Qv3-xG-m1h"/>
                             <constraint firstItem="q6X-4W-eIH" firstAttribute="top" secondItem="Ugh-Eu-T4A" secondAttribute="top" constant="16" id="X1G-W1-JF7"/>
                             <constraint firstAttribute="centerX" secondItem="jgJ-yb-WUt" secondAttribute="centerX" id="c5z-ZR-veS"/>
@@ -75,6 +69,7 @@
                             <constraint firstItem="t6J-7r-FDY" firstAttribute="centerY" secondItem="qev-YZ-xjA" secondAttribute="centerY" id="dKy-fp-C9C"/>
                             <constraint firstItem="EB7-5q-1yL" firstAttribute="centerY" secondItem="tVW-Q8-N9E" secondAttribute="centerY" id="jJP-S2-TDR"/>
                             <constraint firstAttribute="centerX" secondItem="q6X-4W-eIH" secondAttribute="centerX" id="kPz-4R-8gY"/>
+                            <constraint firstItem="tVW-Q8-N9E" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ugh-Eu-T4A" secondAttribute="leading" constant="1" id="wH5-DT-2EL"/>
                             <constraint firstItem="t6J-7r-FDY" firstAttribute="leading" secondItem="qev-YZ-xjA" secondAttribute="trailing" constant="5" id="xW2-fW-3yY"/>
                         </constraints>
                     </view>
@@ -97,4 +92,9 @@
             </connections>
         </tableViewCell>
     </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>

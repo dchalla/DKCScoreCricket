@@ -10,22 +10,26 @@
 	<string>Score Cricket</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>5C0625FFA6E5FE8EB432A1CB019DFE49DAA7D178</key>
+		<string>https://github.com/dchalla/DKCScoreCricket.git</string>
 		<key>D649CF3B-F2DC-41E5-B09B-1870987A8844</key>
 		<string>https://github.com/dchalla/DKCScoreCricket.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Score Cricket.xcodeproj/project.xcworkspace</string>
+	<string>Score Cricket.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>D649CF3B-F2DC-41E5-B09B-1870987A8844</key>
+		<key>5C0625FFA6E5FE8EB432A1CB019DFE49DAA7D178</key>
 		<string>../..</string>
+		<key>D649CF3B-F2DC-41E5-B09B-1870987A8844</key>
+		<string>../../../Score Cricket</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/dchalla/DKCScoreCricket.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D649CF3B-F2DC-41E5-B09B-1870987A8844</string>
+	<string>5C0625FFA6E5FE8EB432A1CB019DFE49DAA7D178</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>D649CF3B-F2DC-41E5-B09B-1870987A8844</string>
 			<key>IDESourceControlWCCName</key>
 			<string>Score Cricket</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5C0625FFA6E5FE8EB432A1CB019DFE49DAA7D178</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Score%20Cricket</string>
 		</dict>
 	</array>
 </dict>

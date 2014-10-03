@@ -112,7 +112,7 @@
 {
 	__weak DKCOnlineMatchesViewController *wSelf = self;
 	
-	NSDate *date = nil;
+	NSDate *date = [NSDate date];
 	if (self.datepicker.selectedDate)
 	{
 		date = self.datepicker.selectedDate;
